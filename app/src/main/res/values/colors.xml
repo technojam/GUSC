@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="backgrounddark">#3246ef</color>
+    <color name="backgroundlight"> #f9d0a2 </color>
+    <color name="transparent">#59000000</color>
+    <color name="text_white">#ffffff</color>
+    <color name="text_black">#000000</color>
+    <color name="gray">#D1D0CE</color>
+    <color name="battleshipGrey">#848482</color>
+    <color name="reviewBarBg">#54A3A3A0</color>
+    <color name="lightRed">#f44d4d</color>
+</resources>
