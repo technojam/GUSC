@@ -27,7 +27,7 @@ public class StartActivity extends AppCompatActivity {
 
         new Timer().schedule(new TimerTask(){
             public void run() {
-                startActivity(new Intent(StartActivity.this, LoginActivity.class));
+                startActivity(new Intent(StartActivity.this, MainActivity.class));
                 finish();
 
                 Log.d("StartActivity:", "onCreate: waiting 5 seconds for StartActivity... loading LoginActivity.class");

@@ -19,7 +19,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginTop="40dp"
-            android:fontFamily="@font/almendra_sc"
             android:text="Hello There \nWelCome Back"
             android:textColor="@color/text_white"
             android:textSize="25sp"
