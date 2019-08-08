@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/lightRed"
+        android:background="@color/BJP"
         app:menu="@menu/nevmenu" />
 
 </RelativeLayout>
