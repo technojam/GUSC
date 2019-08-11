@@ -49,8 +49,6 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.Even
                 context.startActivity(intent);
             }
         });
-
-
     }
 
     @Override
