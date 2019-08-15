@@ -2,12 +2,14 @@ package com.example.gsc;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -30,18 +32,26 @@ public class ClubListAdapter extends RecyclerView.Adapter<ClubListAdapter.ClubHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ClubHolder clubHolder, int i) {
-        ClubList mClub = clubList.get(i);
+    public void onBindViewHolder(@NonNull final ClubHolder clubHolder, int i) {
+        final ClubList mClub = clubList.get(i);
 
         clubHolder.mClubLogo.setImageResource(mClub.getmClubLogo());
         clubHolder.ClubName.setText(mClub.getmClubName());
-        clubHolder.ClubAbout.setText(mClub.getmClubAbout());
 
         clubHolder.rootView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("Log_test","Club is clicked");
                 Intent intent = new Intent(context,ClubActivity.class);
+                intent.putExtra("clubLogo",mClub.getmClubLogo());
+                intent.putExtra("AboutClub",mClub.getmClubAbout());
+                intent.putExtra("ClubName",mClub.getmClubName());
+                intent.putExtra("Head1",mClub.getmHead1());
+                intent.putExtra("Head2",mClub.getmHead2());
+                intent.putExtra("Email1",mClub.getmEmail1());
+                intent.putExtra("Email2",mClub.getmEmail2());
+                intent.putExtra("Phone1",mClub.getmPhoneno1());
+                intent.putExtra("Phone2",mClub.getmPhoneno2());
                 context.startActivity(intent);
             }
         });
@@ -54,7 +64,7 @@ public class ClubListAdapter extends RecyclerView.Adapter<ClubListAdapter.ClubHo
 
     public class ClubHolder extends RecyclerView.ViewHolder{
 
-       CircleImageView mClubLogo;
+       ImageView mClubLogo;
        TextView ClubName,ClubAbout;
        View rootView;
 

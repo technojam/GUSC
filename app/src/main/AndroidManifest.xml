@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gsc">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".EventActivity"></activity>
-        <activity android:name=".ClubActivity" />
+        <activity android:name=".ClubActivity" >
+        </activity>
         <activity android:name=".MainActivity" />
         <activity
             android:name=".LoginActivity"

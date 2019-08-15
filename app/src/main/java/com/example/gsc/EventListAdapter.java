@@ -22,8 +22,6 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.Even
     public EventListAdapter(ArrayList<EventList> Photo , Context context) {
         this.eventList=Photo;
         this.context=context;
-
-
     }
 
 
@@ -38,7 +36,7 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.Even
     public void onBindViewHolder(@NonNull EventListAdapter.EventHolder eventHolder, int i) {
 
         EventList mEvent = eventList.get(i);
-        eventHolder.mClubLogo.setImageResource(mEvent.getmclubLogo());
+
         eventHolder.EventsList.setText(mEvent.getmEventsList());
 
         eventHolder.rootView.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +56,6 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.Even
 
     public class EventHolder extends RecyclerView.ViewHolder{
 
-        CircleImageView mClubLogo;
         TextView EventsList;
         View rootView;
 
@@ -66,7 +63,6 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.Even
             super(itemView);
 
             rootView = itemView;
-            mClubLogo = itemView.findViewById(R.id.clubLogo);
             EventsList = itemView.findViewById(R.id.EventsList);
 
         }
