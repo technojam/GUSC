@@ -13,6 +13,18 @@
        <include layout="@layout/clubui"/>
    </LinearLayout>
 
+    <TextView
+        android:id="@+id/clubName"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textStyle="normal"
+        android:fontFamily="@font/helveticaneue_regular"
+        android:textColor="@color/text_black"
+        />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,17 +34,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <TextView
-                android:id="@+id/clubName"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="30sp"
-                android:textStyle="normal"
-                android:fontFamily="@font/helveticaneue_regular"
-                android:textColor="@color/text_black"
-                />
 
             <TextView
                 android:id="@+id/aboutclub"
@@ -44,7 +45,7 @@
                 android:gravity="center"
                 android:textStyle="normal"
                 android:fontFamily="@font/helveticaneue_regular"
-                android:textColor="@color/battleshipGrey"
+                android:textColor="@color/text_black"
                 />
 
             <LinearLayout

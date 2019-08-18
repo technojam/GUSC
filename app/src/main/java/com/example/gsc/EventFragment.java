@@ -28,12 +28,11 @@ public class EventFragment extends Fragment {
 
         ArrayList<EventList> meventList = new ArrayList<>();
 
-        meventList.add(new EventList(R.drawable.galgotias_university,"Event Name"));
-        meventList.add(new EventList(R.drawable.galgotias_university,"Event Nmae"));
-        meventList.add(new EventList(R.drawable.galgotias_university,"Event Name"));
-        meventList.add(new EventList(R.drawable.galgotias_university,"Event Nmae"));
-        meventList.add(new EventList(R.drawable.galgotias_university,"Event Name"));
-        meventList.add(new EventList(R.drawable.galgotias_university,"Event Nmae"));
+        meventList.add(new EventList("Event Name"));
+        meventList.add(new EventList("Event Name"));
+        meventList.add(new EventList("Event Name"));
+        meventList.add(new EventList("Event Name"));
+        meventList.add(new EventList("Event Name"));
 
         mEventList = rootView.findViewById(R.id.eventRecyclerView);
         mEventList.setLayoutManager(new LinearLayoutManager(getActivity()));

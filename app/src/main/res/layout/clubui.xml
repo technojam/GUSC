@@ -41,8 +41,9 @@
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="5dp"
             android:background="@color/text_white"
-            android:scaleType="fitCenter" />
+            android:scaleType="fitXY" />
 
         <View
             android:layout_width="0dp"

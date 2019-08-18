@@ -14,13 +14,14 @@
         android:background="@color/lightred"
         >
         <TextView
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Clubs"
+            android:textAllCaps="true"
             android:fontFamily="@font/helveticaneue_bold"
-            android:textColor="@color/text_black"
+            android:textColor="@color/text_white"
             android:textSize="25sp" />
     </LinearLayout>
 

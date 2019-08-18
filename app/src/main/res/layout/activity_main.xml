@@ -19,9 +19,13 @@
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigationView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/lightred"
+        android:background="?android:windowBackground"
+        app:itemBackground="@color/lightred"
+        android:foreground="?attr/selectableItemBackground"
+        app:itemIconTint="@color/text_white"
+        app:itemTextColor="@color/text_white"
         app:menu="@menu/nevmenu" />
 
 </RelativeLayout>

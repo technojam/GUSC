@@ -1,5 +1,105 @@
 <resources>
     <string name="app_name">GSC</string>
-    <string name="About_Club">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </string>
+    <string name="About_Club">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard 
+        dummy text ever sincethe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </string>
     <string name="hello_there_nwelcome_back">Hello There  WelCome Back</string>
+    <string name="Artistico_Club">It is said, "He who works with his hands is a Labour. He who works with his hands and his head is a Craftsman but he who works with his hands, 
+        his head and his heart is an ARTIST.\' So, if you believe you have an artist brewing in you, then join us, The Fine Arts Club, on our voyage that can make you explore new dimensions and levels of Aesthetic value.</string>
+    <string name="Cam_Circle">\"You don\'t take a photograph. You MAKE one\". Such was the abominable spirit of the CamCircle, photography club of GU, as they ventured out to 
+        look for new members who were adept at making the world come alive through the curvature. The event spanned for several days on an online platform. The sample space for the photographs ranged from wildlife to caricatures. 
+        Each month club members are encouraged to produce images based upon a specific photo assignment or Theme. A popular activity of the club is the periodic photography field trips or Shootouts. 
+        Comprised primarily of day trips to local locations, Shootouts provide members and guests with practical photographic experience, a way to expand their vision and creativity, and a source of fun 
+        and socialization. Several times a year the CAMCIRCLE provides opportunities for its members to exhibit their work in public venues. Members are encouraged to participate as another way of sharing their photography</string>
+    <string name="Comikaze">Comikaze is the comic book club of Galgotias University. In this club, every member is geek. Whether you\’re a marvel or DC fan, we accept you with full honourability.
+        There is no Iron-Man suit we possess in our resources but can create one together. Come join our League and save the world with us</string>
+    <string name="Verve">We, at Verve believe in hunting down the talent in Galgotias University. We inspire, motivate and build courage among the students of the institution to stand out and showcase their talent in front of everyone. 
+        We also host the annual event \‘Galgotias Got Talent\’ to provide platform for that.</string>
+    <string name="The_Actors_Hub">Drama forms an integral part of every individual. Galgotias\' dramatics club: The Actor\’s Hub exits to enables its members to improve their language, 
+        communicative and performance skills through which they realize their true passion for drama and provide them with the necessary platform to showcase their many talents. Major 
+        activities so far: The club has participated in well-known events like channel V fest and IITD lit fest. Other activities include performing nukkad-natak on various social issues 
+        such as drug addiction among criminals, discrimination against females and stage plays on resource management.</string>
+    <string name="Studio_D">We provide a platform for the members to showcase their dancing prowess before the entire college community by organizing events from time to time. 
+        There are proper auditions to select good dancers from the entire college community to represent our college in various inter-college fests. Club also collaborate with 
+        professional choreographers and experts in organizing workshops for the members to learn different and newer dance styles (salsa, jazz and even classical dance forms)</string>
+    <string name="Spic_Macay_Club">SPIC MACAY, Society for the Promotion of Indian Classical Music and Culture Amongst Youth. is a non-profit, voluntary movement with its primary
+        objective being to expose today’s students and youth/young ones to the beauty, grace and wisdom embodied in the age-old Indian and world Art forms and its heritage.
+        Classical music and dance, and other various art forms dating back to antiquity are the chief media for creating awareness about our culture amongst youth. \n\n
+        Creation of SPIC MACAY happened for the mission and objective to revive the true spirit of the ancient Indian and world heritage. \n\n
+        The club has clear objectives and manages to organize programs and witness world class artists and their performances and tries to provide an environment of learning with the Gurus and the Students.</string>
+    <string name="Scintillations">Glamour that mesmerizes, attitude that takes over. The panache that lasts forever. Along with the bling of blinding lights, 
+        fame that kisses your feet and not to forget, the camera flashes ready to blind you. From designers to models, from tattoo artists to choreographers, 
+        here comes the society so strong, which creates history! The club has created its name and unique identity by showcasing a new theme altogether in every show they have participated.</string>
+    <string name="Reverso">Reverso is all about making endorphin rush through your veins and making you laugh your brains out! This club believes in spreading laughter among all the comrades in Galgotias University. \n\n
+        If you have a bit of humour within you with a pocket full of confidence just to showcase it, come join us at Reverso.</string>
+    <string name="Note_Veda">Music expresses that which cannot be put into words and that which cannot remain silent.” Have you ever imagined about a place filled with immense talent and musical superstars? 
+        Dreamt to be one of them? \n\n Note Veda, is one of the amazing platform for all the musicians with the dreams. With students who have their own album, 
+        Soul Raaga to their name to having their own renowned bands whose names are enough, Crescendo, proudly claims itself to be the best among university music clubs in India. 
+        With their instruments churning out magical sounds and not to forget the melodious voices of the vocalists, music created by the members will surely connect your soul to the heavens. 
+        Galgotias G-Quasar, and almost every prestigious University fest has seen the Galgotians musicians reviving magic in them.</string>
+    <string name="E_Cell">At E-Cell Galgotias University, we believe in creating an environment where the Youth and the Professionals who come together to concoct a new generation of CEOs. 
+        We are here to burgeon the ideas into affluent StartUps because the \"The best way to predict the future is to create it.\" Our team toil here to support the aspiring Entrepreneurs 
+        of the future and look for the people who want to change the world. We are working on enticing Entrepreneurship mindset among the people, open them up to this new world full of fun and zeal.
+        Here we aim at building a strong team with an unmatched work ethic who work Day and Night to fulfil our goal of spreading Awareness regarding Entrepreneurship. 
+        We organize Seminars, E-talks with Mentors, Angel Investors and the Venture Capitalists to Educate the Youth for the Future Endeavours</string>
+    <string name="G_Post">G-Post is the monthly issue of Galgotias University. We believe in spreading words among the student at Galgotias University by presenting a complete 
+        monthly report of all the events and happenings. G-Post is not just a bundle of printed pages but the beautifully woven words bounding you to enjoy every aspect at Galgotias University. 
+        We all are editors at G-Post and work together as team to give student what they need to hear. G-Post is a full package of experiences along with beautiful clicks from every event. 
+        You can get any information regarding the institution if you’re one of us. We are the eyes and ears of Galgotias University and we use them to you how beautiful this campus could be; 
+        you only need to know the right words. Mischief managed.</string>
+    <string name="Lingo_Freaks">A place for the people who believe that punctuation marks are not just emoticons but also can be expressed in emotions. With the university’s cream of anchors,
+        orators, debaters, all present at one place, this club always managed to bring laurels to the university and throne it with crown in field of literary among universities at national level.
+        The Literary club aims to cultivate and nourish the love for literature, written skills and books in each also promoting and organizing various literary events. Ironically it is a platform
+        for those who loves the essence of literature and want to be entangled within it. The club has its background in various literary events ranging from anchoring, debates, jam, ham and many other such events.</string>
+    <string name="Quizita_Mavens">Lorii Mayers once said- If you want the anwer Ask the question!! So if you are looking for answers, join us on the fierce battle of knowledge and unravel the braniac
+        within you and explore the wilderness of cognizance within yourselves. We believe that \‘knowledge has to be improved, challenged and increased constantly, or it vanishes\’.
+        So keep your brain cells charged and accompany us.</string>
+    <string name="Grace">March 24, a day when Galgotias University got its first official festival for Civil Engineers, in the form of “Civil Technical Fest” organized by GRACE 
+        (Galgotias Rising Association for Civil Engineers). \n\n Exuberance and excellence were the two words which kept on revolving around the university on Friday, March 24, 
+        at a time when the fest was going on. Being an inter college fest, it allowed students from different universities to show their talent in the field of Bridge Making, 
+        and also in Report/Presentation design. Also, students from the Architecture department also took part in the Bridge Making competition, allowing them to go a step ahead in engineering. \n\n 
+        A successful event, being a first, and also being a legendary one, it garnered much praise, from students not only from the Civil department, which of course it did, but also 
+        from students across the university, and it was also governed for succeeding in making a name for itself</string>
+    <string name="GU_Management">The GU Management Team is a student body that deals with every event composed of various other student clubs of University. 
+        The Management Team concept aims to empower student leaders to make a difference by creating more opportunities for their peers and in doing so also develop themselves.
+        Whilst the group of enthusiastic student leaders are supported by a member of College staff, it is the GMT members who take full responsibility for event management, 
+        volunteers providing and ushering wherever required in the university\'s event. Roles include bringing maximum registrations, recruiting students for volunteering, 
+        organizing fixtures, managing stage and crowd, and refereeing fixtures; ensuring provision is truly student centred.GU Management Team is a fundamental part of the student council.</string>
+    <string name="Marketing_Team">We fetch the footfall!! The motive of the club is to keep you updated with every single buzz of the campus. Be it a club audition, promotional event,
+        competitions in and outside the campus, workshops, seminars, mini-fiesta and various events of different clubs. The club undertakes fierce promotion during The Galgotias Unifest.</string>
+    <string name="Online_Promotions_Team">This club like marketing manages the social media platform of the University. As the crowd in social media is rising day by day, 
+        this club handles the marketing and promotion in various social platforms of Galgotias University</string>
+    <string name="Sponsorship_Team">From meeting with different people to making difficult deals work, student members of Galgotias Sponsorship Club are efficient in many ways. 
+        They are the backbone of any event being organized in college premises. Be it small or big, any event needs money to get organized successfully and to simplify the process 
+        of bringing in money for such events Galgotias Sponsorship Club takes charge. While dealing with people the student members of this club implement many soft skills needed apparently in day to day life.</string>
+    <string name="Stage_Management_Team">Stage management-the art of being at 50 places at once. No matter how appealing the job may appear the work of stage management is a herculean task: 
+        requiring considerable physical and mental effort of the team. The stage manager might as well be called a miracle worker. We are the one with a temperament and ability 
+        to get along with the diverse groups of technical and artistic personalities alike. \n\n
+        Thus, as aforesaid, Stage management encompasses everything from laying the groundwork to the success of the show. </string>
+    <string name="Automantra">The Automantra Racing team is a group of those young FS enthusiasts, who work together in order to make the best formula car out of the
+        resources they have We also have secured the 2nd overall position in all of the colleges in Formula Student India – 2016. Every year, selections for new team 
+        members takes place, and the best ones are chosen from the lot. We, at Automantra Racing, conduct our own workshops in the Galgotias University, providing 
+        information about the automobiles and stuff related to them, be it of any field, to anyone and everyone who is willing to gain knowledge. Through these workshops, 
+        the core members of the team keep an eye on the participants who perform well during the workshops and conduct a test at the end of the workshop to select the new team members.</string>
+    <string name="The_Humanity_Saviours">We do what we can do! A club that has a sole purpose of serving humanity. Humanity is our favourite charity we the humanitarians work for serving humanity in the society. 
+        We don’t plan and do humanity work, we encourage people to do humanity on their own. Love and compassion are necessities for serving humanity that\’s what we possess and want every individual to do so.</string>
+    <string name="Creative">Creative club members are the people who canvas your imagination on our screen\'s, who add a cheery to your smile by all those posters
+        and videos you see. We are those who craft your t-shirts and logos with all our creativity, we create things for your smile to add that little effect of
+        happiness in your smile. we are nothing but the modern painters painting imagination and fantasies on our laptop screens for you to see.\"Design is not just what
+        it looks like and feels like. Design is how it works.\" - Steve Jobs</string>
+    <string name="Frag">F.R.A.G is all about playing, improving, winning, performing everytime you have your gears on. To sit beside a machine strategizing and discovering
+        new moves to stun the world as a gamer for every winner a loser for every triumph a defeat but on the horizon awaits a new chapter, a new opportunity, a redemption 
+        for glory, for immortality, the brave will take to the systems as warriors to battle shoulder to shoulder, face to face. The Hunger, The Determination to Push Limits, 
+        to fight, Defend, Attach, win and celebrate. It\’s not just about playing the game, It\'s about living it, taking decision that take us to victory or towards downfall. 
+        It\'s about that one magic moment which changes the course of action forever. We are the game. We live the game. We are the F.R.A.G</string>
+    <string name="I_R_I_S">The Club Aims to provide the exposure of research environment of the Student of the GU. We strongly feel that each one of us 
+        is blessed with creativity and innovation which is required to expressed. We focus at developing solutions which are complete in nature (Software hardware). 
+        I.R.I.S- <b>Integrated Robotics and Intelligent Solutions</b> Integrated Robotics and Intelligent Solutions is a club dedicated to techno enthusiast</string>
+    <string name="TechnoJAM">TechnoJAM, a technical community of School of Computing Science and Engineering Galgotias University was established in 2015 with an
+        objective to work on various innovative projects which will bestow creative minds thinking patterns to the upcoming future engineers so that our mind can
+        boost enough so that we can face any hurdles in the way of learning new tactics to deal with ever changing of dynamic technology.\n\n
+        It is a platform to promote and coordinate research and development by students, through student-industry interaction giving students freedom and opportunities
+        to work upon diverse areas of technology,as well as, pursue their own ideas so as to become innovators. To enhance the technical innovativeness of our institute
+        students, we organize Seminars, Workshops, Hackathons, Techfest and many other competitions on various technical level in order to attract the interest of the
+        students towards technical aspects of their education.</string>
+
 </resources>

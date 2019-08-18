@@ -4,7 +4,7 @@ public class EventList {
 
     private String mEventsList;
 
-    public EventList(int clubLogo, String EventsList) {
+    public EventList( String EventsList) {
         mEventsList = EventsList;
     }
 

@@ -3,13 +3,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    >
+    android:background="@color/transparent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="100">
+        android:weightSum="100"
+        android:background="@color/transparent">
         <ImageView
             android:id="@+id/clubLogo"
             android:layout_width="100dp"
@@ -20,20 +21,22 @@
             android:elevation="2dp"
             android:paddingStart="1dp"
             android:paddingTop="12dp"
+            android:background="@color/transparent"
             android:paddingBottom="12dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/transparent">
 
             <TextView
                 android:id="@+id/clubName"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Club Name"
-                android:textSize="15sp"
-                android:layout_marginTop="30dp"
+                android:textSize="20sp"
+                android:gravity="center"
                 android:textColor="@color/text_black"
                 android:textStyle="normal"
                 android:fontFamily="@font/helveticaneue_regular"
