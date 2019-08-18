@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">GSC</string>
-    <string name="About_Club">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard 
+    <string name="test_string">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard
         dummy text ever sincethe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </string>
     <string name="hello_there_nwelcome_back">Hello There  WelCome Back</string>
     <string name="Artistico_Club">It is said, "He who works with his hands is a Labour. He who works with his hands and his head is a Craftsman but he who works with his hands, 
@@ -101,5 +101,6 @@
         to work upon diverse areas of technology,as well as, pursue their own ideas so as to become innovators. To enhance the technical innovativeness of our institute
         students, we organize Seminars, Workshops, Hackathons, Techfest and many other competitions on various technical level in order to attract the interest of the
         students towards technical aspects of their education.</string>
+
 
 </resources>
