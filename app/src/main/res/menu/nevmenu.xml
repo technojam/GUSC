@@ -4,7 +4,7 @@
     <item
         android:id="@+id/club"
         android:icon="@drawable/ic_club_white"
-        android:title="club"/>
+        android:title="Club"/>
 
     <item
         android:id="@+id/home"
@@ -14,5 +14,5 @@
     <item
         android:id="@+id/event"
         android:icon="@drawable/ic_event_white"
-        android:title="event"/>
+        android:title="Event"/>
 </menu>

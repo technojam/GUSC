@@ -16,12 +16,12 @@
             android:layout_weight="95"
             android:background="@color/transparent">
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop"
-                android:src="@drawable/galgotias_university_logo" />
+                android:src="@drawable/student_council_logo" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -30,7 +30,6 @@
                 android:textAllCaps="true"
                 android:textColor="@color/lightred"
                 android:textSize="25sp"
-                android:layout_marginTop="20dp"
                 android:padding="6dp"
                 android:layout_gravity="center"
                 android:fontFamily="@font/helveticaneue_bold"
