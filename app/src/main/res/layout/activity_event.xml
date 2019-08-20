@@ -1,98 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EventActivity"
-    android:orientation="vertical">
+    tools:context=".EventActivity">
 
-
-    <LinearLayout
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:background="@color/Voilet"
-        android:orientation="vertical">
+        android:layout_height="300dp"
+        android:id="@+id/appbar">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:text="Event Name"
-            android:textColor="@color/text_white"
-            android:textSize="25sp" />
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/CollapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/event_background"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="30dp"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+            app:title="Event Name">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
-            android:text="Monday,22,2019"
-            android:textColor="@color/text_white"
-            android:textSize="15sp" />
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarid"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"></android.support.v7.widget.Toolbar>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
-            android:text="Time"
-            android:textColor="@color/text_white"
-            android:textSize="15sp" />
+        </android.support.design.widget.CollapsingToolbarLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Venue"
-            android:textColor="@color/text_white"
-            android:textSize="15sp" />
 
-    </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-         <LinearLayout
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:orientation="vertical"
-             android:background="@color/transparent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-             <TextView
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:text="Contact"
-                 android:layout_marginLeft="30dp"
-                 android:layout_marginTop="20dp"
-                 android:textSize="25sp"
-                 android:textColor="@color/lightred"/>
-             <TextView
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:text="Description"
-                 android:textSize="25dp"
-                 android:layout_marginTop="20dp"
-                 android:layout_marginLeft="30dp"
-                 android:textColor="@color/lightred"/>
-             <TextView
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:text="@string/test_string"
-                 android:textSize="25dp"
-                 android:padding="16dp"
-                 android:gravity="center"
-                 android:fontFamily="@font/helveticaneue_regular"
-                 android:textStyle="normal"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Contact"
+                    android:textColor="@color/lightred"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Description"
+                    android:textColor="@color/lightred"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="@string/test_string"
+                    android:textSize="25dp"
+                    android:textStyle="normal" />
 
 
-
-         </LinearLayout>
+            </LinearLayout>
 
         </ScrollView>
 
 
-</LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
