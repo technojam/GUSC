@@ -16,7 +16,7 @@
         android:layout_above="@id/navigationView"
         />
 
-    <android.support.design.widget.BottomNavigationView
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigationView"
         android:layout_width="match_parent"
         android:layout_height="52dp"

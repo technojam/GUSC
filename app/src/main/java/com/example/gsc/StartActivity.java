@@ -1,7 +1,7 @@
 package com.example.gsc;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
@@ -27,7 +27,7 @@ public class StartActivity extends AppCompatActivity {
 
         new Timer().schedule(new TimerTask(){
             public void run() {
-                startActivity(new Intent(StartActivity.this, MainActivity.class));
+                startActivity(new Intent(StartActivity.this, LoginActivity.class));
                 finish();
 
                 Log.d("StartActivity:", "onCreate: waiting 5 seconds for StartActivity... loading LoginActivity.class");
