@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WhatWeDoActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/lightred"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="WHAT WE DO"
+            android:textColor="@color/text_white"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:fontFamily="@font/helveticaneue_bold"/>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MISSION"
+            android:layout_marginStart="10dp"
+            android:textSize="25sp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/lightred"
+            android:fontFamily="@font/helveticaneue_bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/What_we_do_Mission"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/helveticaneue_regular"
+            android:textColor="@color/text_black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VISION"
+            android:textSize="25sp"
+            android:textColor="@color/lightred"
+            android:fontFamily="@font/helveticaneue_bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/What_we_do_Vision"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/helveticaneue_regular"
+            android:textColor="@color/text_black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VALUES"
+            android:textSize="25sp"
+            android:textColor="@color/lightred"
+            android:fontFamily="@font/helveticaneue_bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/What_we_do_Values_Trust"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/helveticaneue_regular"
+            android:textColor="@color/text_black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/What_we_do_Values_Intigrity"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/helveticaneue_regular"
+            android:textColor="@color/text_black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/What_we_do_Enviroment"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/helveticaneue_regular"
+            android:textColor="@color/text_black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/What_we_do_Equality"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/helveticaneue_regular"
+            android:textColor="@color/text_black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/What_we_do_Empowerment"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/helveticaneue_regular"
+            android:textColor="@color/text_black"/>
+
+
+    </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -96,7 +96,8 @@
                     android:gravity="center"
                     android:orientation="vertical"
                     android:background="@drawable/round_rectangle"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:id="@+id/What_we_do">
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="80dp"
                         android:layout_marginTop="10dp"
@@ -120,7 +121,8 @@
                     android:layout_marginStart="20dp"
                     android:orientation="vertical"
                     android:background="@drawable/round_rectangle"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:id="@+id/constitution">
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
@@ -153,7 +155,8 @@
                     android:gravity="center"
                     android:orientation="vertical"
                     android:background="@drawable/round_rectangle"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Hierarchy">
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="80dp"
                         android:layout_marginTop="10dp"
@@ -177,7 +180,8 @@
                     android:layout_marginStart="20dp"
                     android:orientation="vertical"
                     android:background="@drawable/round_rectangle"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:id="@+id/F_A_Q">
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
