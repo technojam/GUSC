@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">691566732507-khal747ltm7ni6lr2150fj73s67fqeq9.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://galgotiasstudentcouncilapp.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">691566732507</string>
+    <string name="google_api_key" translatable="false">AIzaSyBhcu7qZGJvG4Nc2HGnbfP9hBRP7tl2i1U</string>
+    <string name="google_app_id" translatable="false">1:691566732507:android:c52e0b8809dde75d</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBhcu7qZGJvG4Nc2HGnbfP9hBRP7tl2i1U</string>
+    <string name="google_storage_bucket" translatable="false">galgotiasstudentcouncilapp.appspot.com</string>
+    <string name="project_id" translatable="false">galgotiasstudentcouncilapp</string>
+</resources>
