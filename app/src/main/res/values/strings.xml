@@ -113,7 +113,71 @@
         or any other possible discriminatory factors.</string>
     <string name="What_we_do_Empowerment"><b>Empowerment</b>: The opinions, fears, prospects and wishes of students are at the heart of everything we do and allow us to set targets that are realistic
         to their expectations.</string>
+    <string name="Constitution_Preamble">Preamble</string>
+    <string name="Constitution_Declaration">Declaration</string>
+    <string name="Constitution_Membership">Membership</string>
+    <string name="Constitution_CouncilsCoreTeam">Councils Core Team</string>
+    <string name="Constitution_The_Executive">The Executive</string>
 
+    <string-array name="Constitution_Preamble">
+        <item>Galgotias University Student Council is a conglomerate of students’ clubs and societies at Galgotias University. The council is a part of the University administrative and academic structure
+            unlike an independent Union. The Council is devoted to the educational interests and welfare of its members while following strict guidelines established by the University.
+            Establishment and Name:
+            1.1 There shall be only one Students’ Council at Galgotias University.
+            1.2 The name of the Students’ Council shall be “Galgotias University Student’s Council”
+
+        </item>
+    </string-array>
+
+    <string-array name="Constitution_Declaration">
+        <item>The student’s Council does not act independently under any circumstances, any new agenda is presented to the University Administration in form of a written report and is not acted upon unless approved.
+                Other than their cardinal roles the Student Executive officers that form the core team are responsible for all formal contacts between the student members and the University Administration (The Vice-Chancellor, The Pro
+                Vice Chancellor, The Proctor, Dean Academics and Respective School deans) and are required to inform the authorities before conducting any activity inside the University Campus.
+        </item>
+    </string-array>
+
+    <string-array name="Constitution_Membership">
+        <item>
+         3.1 Every student who enrolls at Galgotias University is automatically registered as a general member of the student body. Upon registering for one of our clubs they become full time members, giving them access to all of our
+            services and to an organization which is able to represent them to the community and to the world beyond. They are also given the right and power to shape the council’s direction through member feedback and annual meetings.
+            3.2 If for any reason a member does not wish to be a member of the council, they can opt out of membership at any time by emailing the Council HR department or the Council Core team. A student can still enjoy all of our facilities and
+            services if they opt out, but they cannot have a voice at membership meetings or other democratic activity.
+        </item>
+    </string-array>
+
+    <string-array name="Constitution_CouncilsCoreTeam">
+        <item>
+            4.1 There shall be a representative body that runs day to day activities of the clubs and societies. This representative body that forms the core of the council stay in direct administrative contact with the University management for introspection and successful execution of all student activities \n\n
+            4.2 Council Core shall consist of the appointed Council Executives. \n\n
+            4.3 A Council meeting may be called by any of the following: \n\n
+            4.3.1 The University Administration \n\n
+            4.3.2 The Executives \n\n
+            4.3.3 Two Third of Council Members \n\n
+            4.4 At least one working days’ notice must be given for all council meetings unless the meeting is called by the University Administration. \n\n
+            4.5 Motions for discussion at council meetings must be submitted in writing to the General Secretary two working days prior to the holding of the meetings. \n\n
+            4.5.1 The quorum for a meeting shall be 60% of the registered students. \n\n
+        </item>
+    </string-array>
+    
+    <string-array name="Constitution_The_Executive">
+        <item>
+            5.1 There shall be an executive team.
+            5.2 The Executives shall be responsible for the initiation of policy of the Council, General Meeting, and key decisions. \n\n
+            5.3 The executive (Core) team shall consist of the following post: \n\n
+            5.3.1 General Secretary (Chief Administrative Officer &amp; Principal Spokesperson) \n\n
+            5.3.2 Chief Secretary (Chief Operations Officer) \n\n
+            5.3.3 Joint Secretary (Head of Welfare) \n\n
+            5.3.4 Vice Secretary (Head of Communication) \n\n
+            5.3.5 Regent Secretary (Head of Events) \n\n
+            5.3.6 Deputy Regent Secretary (Deputy Head of Events) \n\n
+            5.3.7 Ad Hoc Member \n\n
+            5.4 Only final year students of their respective courses shall be appointed to as Core Executives. No member of the Executive Core may hold any other position in the Council unless called upon in case of a deficit.
+            5.5 <b>The General Secretary (Chief Administrative Officer &amp; Principal Spokesperson)</b>– shall have full membership of the Council and shall be the principal spokesperson and chief administrative officer who
+                overlooks all the activities of the council. He/She shall be the chief representative of the students and shall have five main areas of responsibility: Finance, representation, organization, supervision and guidance of policy./n/n
+            5.6 <b>The Chief Secretary (Chief Operations Officer)</b>- shall have full membership of the Council and is the chief operations officer of the council.. He/she plays similar roles as the General Secretary and shall time to time act for and on behalf of the General Secretary and can take independent decisions upon consultation with the General Secretary.\n\n
+
+        </item>
+    </string-array>
 
 
 </resources>

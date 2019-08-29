@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ConstitutionActivity"></activity>
+        <activity android:name=".FAQActivity"></activity>
+        <activity android:name=".HierarchyActivity" />
+        <activity android:name=".ConstitutionActivity" />
         <activity android:name=".WhatWeDoActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".EventActivity" />
