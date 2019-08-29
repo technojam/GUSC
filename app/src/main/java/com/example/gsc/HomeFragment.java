@@ -12,7 +12,6 @@ import android.widget.LinearLayout;
 
 
 public class HomeFragment extends Fragment {
-    public LinearLayout wh;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -38,6 +37,27 @@ public class HomeFragment extends Fragment {
                 startActivity(new Intent(getActivity(),WhatWeDoActivity.class));
             }
         });
+
+        //For Hierarchy;
+
+        LinearLayout mHierarchy = view.findViewById(R.id.Hierarchy);
+
+        mHierarchy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),HierarchyActivity.class));
+            }
+        });
+
+        //For FAQ
+        LinearLayout mFAQ = view.findViewById(R.id.F_A_Q);
+        mFAQ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),FAQActivity.class));
+            }
+        });
+
 
         return view;
     }
