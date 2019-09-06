@@ -14,6 +14,8 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class HeadsBottomClass extends BottomSheetDialogFragment  {
 
 
@@ -32,6 +34,8 @@ public class HeadsBottomClass extends BottomSheetDialogFragment  {
         ImageButton mEmail_2_btn = view.findViewById(R.id.emailbutton2);
         ImageButton mCall_1_btn = view.findViewById(R.id.callbutton1);
         ImageButton mCall_2_btn = view.findViewById(R.id.callbutton2);
+        CircleImageView mClubHeadPic1 = view.findViewById(R.id.headpic1);
+        CircleImageView mClubHeadPic2 = view.findViewById(R.id.headpic2);
 
         String headname1 = getArguments().getString("head1");
         String headname2 = getArguments().getString("head2");
@@ -39,6 +43,8 @@ public class HeadsBottomClass extends BottomSheetDialogFragment  {
         final String email2 = getArguments().getString("email2");
         final String phone1 = getArguments().getString("phone1");
         final String phone2 = getArguments().getString("phone2");
+        final int clubHeadPic1 = getArguments().getInt("clubHeadPic1");
+        final int clubHeadPic2 = getArguments().getInt("clubHeadPic2");
 
         if (headname1 != null && headname2 != null)
             title.setText("Heads");
@@ -48,6 +54,7 @@ public class HeadsBottomClass extends BottomSheetDialogFragment  {
         if(headname1 != null)
         {
             Head1.setText(headname1);
+            mClubHeadPic1.setImageResource(clubHeadPic1);
             // for mail
             if (email1 != null)
             {
@@ -84,7 +91,7 @@ public class HeadsBottomClass extends BottomSheetDialogFragment  {
         if (headname2 != null)
             {
                 Head2.setText(headname2);
-
+                mClubHeadPic2.setImageResource(clubHeadPic2);
                 // for mail
 
                 if (email2 != null)

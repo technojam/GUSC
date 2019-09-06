@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">GSC</string>
+    <array name="Clubs">
+        <item>Technojam</item>
+        <item>Frag</item>
+        <item>kafila</item>
+        <item>gu management</item>
+        <item>gpost</item>
+    </array>
+
     <string name="test_string">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard
         dummy text ever sincethe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </string>
     <string name="hello_there_nwelcome_back">Hello There \nWelCome Back</string>
@@ -101,6 +109,7 @@
         to work upon diverse areas of technology,as well as, pursue their own ideas so as to become innovators. To enhance the technical innovativeness of our institute
         students, we organize Seminars, Workshops, Hackathons, Techfest and many other competitions on various technical level in order to attract the interest of the
         students towards technical aspects of their education.</string>
+    <string name="No_Clubs_Selected">No Clubs Selected</string>
     <string name="What_we_do_Mission">Holistic development is what we aim for by providing representation, educational development andsocial &amp; extracurricular opportunities.</string>
     <string name="What_we_do_Vision">At the heart of the Student Experience; we strive to have a positive impact on each and every one of our members.</string>
     <string name="What_we_do_Values_Trust"><b>Trust</b>: We put faith and trust in our Students and their ability to manage student activities, as well as in-spiring trust in our students
@@ -158,7 +167,7 @@
             4.5.1 The quorum for a meeting shall be 60% of the registered students. \n\n
         </item>
     </string-array>
-    
+
     <string-array name="Constitution_The_Executive">
         <item>
             5.1 There shall be an executive team.

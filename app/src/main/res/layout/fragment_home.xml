@@ -71,7 +71,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/round_rectangle"
+        android:background="@drawable/rectangle"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginTop="5dp"
@@ -95,7 +95,7 @@
                     android:layout_width="150dp"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:background="@drawable/round_rectangle"
+                    android:background="@drawable/rectangle"
                     android:layout_height="wrap_content"
                     android:id="@+id/What_we_do">
                     <de.hdodenhof.circleimageview.CircleImageView
@@ -120,7 +120,7 @@
                     android:gravity="center"
                     android:layout_marginStart="20dp"
                     android:orientation="vertical"
-                    android:background="@drawable/round_rectangle"
+                    android:background="@drawable/rectangle"
                     android:layout_height="wrap_content"
                     android:id="@+id/constitution">
                     <de.hdodenhof.circleimageview.CircleImageView
@@ -154,7 +154,7 @@
                     android:layout_width="150dp"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:background="@drawable/round_rectangle"
+                    android:background="@drawable/rectangle"
                     android:layout_height="wrap_content"
                     android:id="@+id/Hierarchy">
                     <de.hdodenhof.circleimageview.CircleImageView
@@ -179,7 +179,7 @@
                     android:gravity="center"
                     android:layout_marginStart="20dp"
                     android:orientation="vertical"
-                    android:background="@drawable/round_rectangle"
+                    android:background="@drawable/rectangle"
                     android:layout_height="wrap_content"
                     android:id="@+id/F_A_Q">
                     <de.hdodenhof.circleimageview.CircleImageView
@@ -198,6 +198,24 @@
                         android:textStyle="normal"
                         android:fontFamily="@font/helveticaneue_regular"/>
                 </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rectangle"
+                android:layout_marginEnd="20dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:id="@+id/registrationbtn"
+                    android:layout_height="wrap_content"
+                    android:text="Register for Clubs"
+                    android:textColor="@color/text_black"
+                    />
+
             </LinearLayout>
 
         </LinearLayout>

@@ -4,6 +4,7 @@ import android.content.Intent;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -53,10 +54,10 @@ public class SignUpActivity extends AppCompatActivity {
                     mPassword.setError("Please enter Conferm password");
                     mPassword.requestFocus();
                 }
-                else if(email.isEmpty() && password.isEmpty() && confPassword.isEmpty()){
+                else if(TextUtils.isEmpty(email) && TextUtils.isEmpty(password) && TextUtils.isEmpty(confPassword)){
                     Toast.makeText(SignUpActivity.this,"Fields are empty",Toast.LENGTH_SHORT).show();
                 }
-                else if(!(email.isEmpty() && password.isEmpty() && confPassword.isEmpty())){
+                else if(!(TextUtils.isEmpty(email) && TextUtils.isEmpty(password) && TextUtils.isEmpty(confPassword))){
                     if(password.equals(confPassword)) {
                         mFirebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override

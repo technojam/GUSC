@@ -2,13 +2,15 @@ package com.example.gsc;
 
 import java.util.Arrays;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class ClubList {
 
     private int mClubLogo ;
     private String mPhoneno1,mPhoneno2,mClubName,mClubAbout,mHead1,mHead2,mEmail1,mEmail2;
+    private int mClubHeadPic1, mClubHeadPic2;
 
-
-    public ClubList(int ClubLogo, String ClubName, String ClubAbout, String Head1, String Head2, String Email1, String Email2, String Phone1, String Phone2){
+    public ClubList(int ClubLogo, String ClubName, String ClubAbout, String Head1, String Head2, String Email1, String Email2, String Phone1, String Phone2, int mClubHeadPic1, int mClubHeadPic2){
         mClubLogo = ClubLogo;
         mClubName = ClubName;
         mClubAbout = ClubAbout;
@@ -40,9 +42,20 @@ public class ClubList {
         else
             mPhoneno2 = Phone2;
 
+        this.mClubHeadPic1 = mClubHeadPic1;
+        this.mClubHeadPic2 = mClubHeadPic2;
+
 
     }
 
+
+    public int getmClubHeadPic1() {
+        return mClubHeadPic1;
+    }
+
+    public int getmClubHeadPic2() {
+        return mClubHeadPic2;
+    }
 
     public int getmClubLogo(){return mClubLogo;}
     public  String getmClubName(){return mClubName;}

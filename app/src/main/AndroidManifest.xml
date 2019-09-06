@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gsc">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,11 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".FAQActivity"></activity>
+        <activity android:name=".RegistrationActivity"/>
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".FAQActivity"/>
         <activity android:name=".HierarchyActivity" />
         <activity android:name=".ConstitutionActivity" />
         <activity android:name=".WhatWeDoActivity" />
-        <activity android:name=".SignUpActivity" />
         <activity android:name=".EventActivity" />
         <activity android:name=".ClubActivity" />
         <activity android:name=".MainActivity" />
@@ -30,8 +35,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

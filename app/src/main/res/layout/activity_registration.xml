@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegistrationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@drawable/bottomround">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registration Form"
+            android:textColor="@color/text_black"
+            android:fontFamily="@font/helveticaneue_bold"
+            android:textStyle="normal"
+            android:textAllCaps="false"
+            android:textSize="25sp"/>
+    </LinearLayout>
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_marginStart="5dp"
+       android:layout_marginEnd="5dp"
+       android:background="@drawable/rectangle"
+       android:layout_marginTop="10dp">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <EditText
+               android:id="@+id/Name"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"
+               android:hint="Name"
+               android:textSize="15sp"
+               android:textStyle="normal"
+               android:fontFamily="@font/helveticaneue_regular"
+               android:textColorHint="@color/text_black"
+               android:backgroundTint="@color/gray"
+               android:singleLine="true"
+               android:inputType="text"/>
+
+           <EditText
+               android:id="@+id/AdmissionNo"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"
+               android:hint="Admission No"
+               android:textSize="15sp"
+               android:textStyle="normal"
+               android:fontFamily="@font/helveticaneue_regular"
+               android:textColorHint="@color/text_black"
+               android:backgroundTint="@color/gray"
+               android:singleLine="true"
+               android:inputType="text"/>
+
+           <EditText
+               android:id="@+id/EnrollNo"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"
+               android:hint="Enrollment NO"
+               android:textSize="15sp"
+               android:textStyle="normal"
+               android:fontFamily="@font/helveticaneue_regular"
+               android:textColorHint="@color/text_black"
+               android:backgroundTint="@color/gray"
+               android:singleLine="true"
+               android:inputType="number"/>
+
+           <EditText
+               android:id="@+id/ContactNo"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"
+               android:hint="Contact No"
+               android:textSize="15sp"
+               android:textStyle="normal"
+               android:fontFamily="@font/helveticaneue_regular"
+               android:textColorHint="@color/text_black"
+               android:backgroundTint="@color/gray"
+               android:singleLine="true"
+               android:inputType="phone"/>
+
+           <EditText
+               android:id="@+id/WhatsappNo"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"
+               android:hint="Whatsapp NO"
+               android:textSize="15sp"
+               android:textStyle="normal"
+               android:fontFamily="@font/helveticaneue_regular"
+               android:textColorHint="@color/text_black"
+               android:backgroundTint="@color/gray"
+               android:singleLine="true"
+               android:inputType="phone"/>
+
+           <EditText
+               android:id="@+id/EmailId"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"
+               android:hint="Email Id"
+               android:textSize="15sp"
+               android:textStyle="normal"
+               android:fontFamily="@font/helveticaneue_regular"
+               android:textColorHint="@color/text_black"
+               android:backgroundTint="@color/gray"
+               android:singleLine="true"
+               android:inputType="textEmailAddress"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="15dp"
+               android:orientation="horizontal"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"
+               android:weightSum="3">
+               <View
+                   android:layout_width="0dp"
+                   android:layout_gravity="center"
+                   android:layout_weight="1.15"
+                   android:layout_height="1dp"
+                   android:elevation="4dp"
+                   android:background="@color/gray"/>
+
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_weight="0.7"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:paddingStart="2dp"
+                   android:paddingEnd="2dp"
+                   android:text="Select Clubs"
+                   android:textColor="@color/gray"
+                   android:textStyle="normal" />
+
+               <View
+                   android:layout_width="0dp"
+                   android:layout_gravity="center"
+                   android:layout_weight="1.15"
+                   android:elevation="4dp"
+                   android:layout_height="1dp"
+                   android:background="@color/gray"/>
+           </LinearLayout>
+
+           <Button
+               android:id="@+id/selectClub"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_gravity="center"
+               android:text="Select Clubs"
+               android:textColor="@color/text_black"
+               app:cornerRadius="5dp"
+               android:elevation="4dp"/>
+
+           <EditText
+               android:id="@+id/clubsSelected"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="@color/text_black"
+               android:layout_gravity="center"
+               android:text="No Clubs Selected"
+               android:fontFamily="@font/helveticaneue_regular"
+               android:textSize="18sp"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_marginTop="5dp"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Fee:-"
+                   android:textSize="15sp"
+                   android:layout_gravity="center"/>
+               <TextView
+                   android:id="@+id/Fee"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="10sp"
+                   android:text="Rs 0.0"
+                   android:layout_gravity="center"
+                   android:textSize="15sp"/>
+           </LinearLayout>
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_gravity="center"
+               android:elevation="4dp"
+               android:layout_marginTop="20dp"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"
+               android:layout_height="1dp"
+               android:background="@color/gray"/>
+
+           <Button
+               android:id="@+id/registerbtn"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:text="Register Me"
+               android:textColor="@color/text_black"
+               app:cornerRadius="5dp"
+               android:layout_marginTop="20dp"
+               android:layout_marginBottom="30dp"/>
+       </LinearLayout>
+
+   </ScrollView>
+
+</LinearLayout>

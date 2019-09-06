@@ -51,6 +51,8 @@ public class ClubListAdapter extends RecyclerView.Adapter<ClubListAdapter.ClubHo
                 intent.putExtra("Email2",mClub.getmEmail2());
                 intent.putExtra("Phone1",mClub.getmPhoneno1());
                 intent.putExtra("Phone2",mClub.getmPhoneno2());
+                intent.putExtra("ClubHeadPic1",mClub.getmClubHeadPic1());
+                intent.putExtra("ClubHeadPic2",mClub.getmClubHeadPic2());
                 context.startActivity(intent);
             }
         });

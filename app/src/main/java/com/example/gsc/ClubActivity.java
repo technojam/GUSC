@@ -19,14 +19,17 @@ public class ClubActivity extends AppCompatActivity {
         TextView mAboutClub = findViewById(R.id.aboutclub);
 
         int clubLogo = getIntent().getExtras().getInt("clubLogo");
-        String clubName = getIntent().getStringExtra("ClubName");
-        String aboutClub = getIntent().getStringExtra("AboutClub");
+       final String clubName = getIntent().getStringExtra("ClubName");
+       final String aboutClub = getIntent().getStringExtra("AboutClub");
+
         final String head1 = getIntent().getStringExtra("Head1");
         final String head2 = getIntent().getStringExtra("Head2");
         final String email1 = getIntent().getStringExtra("Email1");
         final String email2 = getIntent().getStringExtra("Email2");
         final String phone1 = getIntent().getStringExtra("Phone1");
         final String phone2 = getIntent().getStringExtra("Phone2");
+        final int mClubHeadPic1 = getIntent().getExtras().getInt("ClubHeadPic1");
+        final int mClubHeadPic2 = getIntent().getExtras().getInt("ClubHeadPic2");
 
 
         mclubLogo.setImageResource(clubLogo);
@@ -46,6 +49,8 @@ public class ClubActivity extends AppCompatActivity {
                 clubHeadNamesBundle.putString("email2",email2);
                 clubHeadNamesBundle.putString("phone1",phone1);
                 clubHeadNamesBundle.putString("phone2",phone2);
+                clubHeadNamesBundle.putInt("clubHeadPic1",mClubHeadPic1);
+                clubHeadNamesBundle.putInt("clubHeadPic2",mClubHeadPic2);
 
                 headsbottomview.setArguments(clubHeadNamesBundle);
                 headsbottomview.show(getSupportFragmentManager(),"HeadsBottomView");

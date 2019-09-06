@@ -28,9 +28,9 @@ public class ClubFragment extends Fragment {
 
         ArrayList<ClubList> mclublist = new ArrayList<>();
 
-        mclublist.add(new ClubList(R.drawable.gu_mnangement_logo,"GU Management Team",getString(R.string.GU_Management),"Gautam Arya","Deepanshu Goyal","gautam.arya01_2017@galgotiasuniversity.edu.in","deepanshu.goyal01_2017@galgotiasuniversity.edu.in","7764911451","8979106667"));
-        mclublist.add(new ClubList(R.drawable.technojam_logo,"TechnoJam",getString(R.string.TechnoJAM),"Anubhav Raj Singh","Swetank","anubhavraj.08@gmail.com","Swetank199@gmail.com","9521419475","7042435242"));
-        mclublist.add(new ClubList(R.drawable.ecell_logo, "E-Cell", getString(R.string.E_Cell),"Earthson Xavier","xx","earthson@galgotiasuniversity.edu.in","xx","xx","xx"));
+     /*   mclublist.add(new ClubList(R.drawable.gu_mnangement_logo,"GU Management Team",getString(R.string.GU_Management),"Gautam Arya","Deepanshu Goyal","gautam.arya01_2017@galgotiasuniversity.edu.in","deepanshu.goyal01_2017@galgotiasuniversity.edu.in","7764911451","8979106667"));*/
+        mclublist.add(new ClubList(R.drawable.technojam_logo,"TechnoJam",getString(R.string.TechnoJAM),"Anubhav Raj Singh","Swetank","anubhavraj.08@gmail.com","Swetank199@gmail.com","9521419475","7042435242",R.drawable.anubhav_raj_singh,R.drawable.swatank));
+      /*  mclublist.add(new ClubList(R.drawable.ecell_logo, "E-Cell", getString(R.string.E_Cell),"Earthson Xavier","xx","earthson@galgotiasuniversity.edu.in","xx","xx","xx"));
         mclublist.add(new ClubList(R.drawable.frag_logo,"F.R.A.G Club",getString(R.string.Frag),"Prayas Kundu","Amaan Siddiqui","prayasm4a1@gmail.com","amaansiddiqui14@gmail.com","9818441774","9811679465"));
         mclublist.add(new ClubList(R.drawable.kafila_logo,"Kafila",getString(R.string.test_string),"Swastik Anand Tripathi","Sujata Tripathi","swastik.tripathicool@gmail.com","sujatatripathi1619@gmail.com","8918756193","7985211676"));
         mclublist.add(new ClubList(R.drawable.galgotias_university_small_logo,"Stage Management",getString(R.string.Stage_Management_Team),"Abhishek Das","xx","abhishekdas672@gmail.com","xx","7503674855","xx"));
@@ -54,7 +54,7 @@ public class ClubFragment extends Fragment {
         mclublist.add(new ClubList(R.drawable.galgotias_university_small_logo,"Reverso",getString(R.string.Reverso),"Apoorv Mishra","xx","apoorv.misra@galgotiasuniversity.edu.in","xx","7291826231","xx"));
         mclublist.add(new ClubList(R.drawable.galgotias_university_small_logo,"IRIS",getString(R.string.I_R_I_S),"KUMAR DIVYA MANI","xx","dxivyamani@gmail.com","xx","9667898837","xx"));
         mclublist.add(new ClubList(R.drawable.galgotias_university_small_logo,"Online Promotions",getString(R.string.Online_Promotions_Team),"Anindita Chaki","Tanul Prabhat Rai","aninditachaki1234@gmail.com","tanul9876@gmail.com","8448268447","8604607841"));
-
+*/
 
         mClubList = rootView.findViewById(R.id.clubRecyclerView);
         mClubList.setLayoutManager(new LinearLayoutManager(getActivity()));
