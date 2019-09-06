@@ -129,34 +129,42 @@
     <string name="Constitution_The_Executive">The Executive</string>
 
     <string-array name="Constitution_Preamble">
-        <item>Galgotias University Student Council is a conglomerate of students’ clubs and societies at Galgotias University. The council is a part of the University administrative and academic structure
+        <item>Galgotias University Student Council is a conglomerate of students’ clubs and societies at Galgotias University. The council is a part of the University
+            administrative and academic structure
             unlike an independent Union. The Council is devoted to the educational interests and welfare of its members while following strict guidelines established by the University.
-            Establishment and Name:
-            1.1 There shall be only one Students’ Council at Galgotias University.
+            Establishment and Name:\n\n
+            1.1 There shall be only one Students’ Council at Galgotias University.\n\n
             1.2 The name of the Students’ Council shall be “Galgotias University Student’s Council”
 
         </item>
     </string-array>
 
     <string-array name="Constitution_Declaration">
-        <item>The student’s Council does not act independently under any circumstances, any new agenda is presented to the University Administration in form of a written report and is not acted upon unless approved.
-                Other than their cardinal roles the Student Executive officers that form the core team are responsible for all formal contacts between the student members and the University Administration (The Vice-Chancellor, The Pro
-                Vice Chancellor, The Proctor, Dean Academics and Respective School deans) and are required to inform the authorities before conducting any activity inside the University Campus.
+        <item>The student’s Council does not act independently under any circumstances, any new agenda is presented to the University Administration in form of a written
+            report and is not acted upon unless approved.
+                Other than their cardinal roles the Student Executive officers that form the core team are responsible for all formal contacts between the student members
+            and the University Administration (The Vice-Chancellor, The Pro
+                Vice Chancellor, The Proctor, Dean Academics and Respective School deans) and are required to inform the authorities before conducting any activity inside
+            the University Campus.
         </item>
     </string-array>
 
     <string-array name="Constitution_Membership">
         <item>
-         3.1 Every student who enrolls at Galgotias University is automatically registered as a general member of the student body. Upon registering for one of our clubs they become full time members, giving them access to all of our
-            services and to an organization which is able to represent them to the community and to the world beyond. They are also given the right and power to shape the council’s direction through member feedback and annual meetings.
-            3.2 If for any reason a member does not wish to be a member of the council, they can opt out of membership at any time by emailing the Council HR department or the Council Core team. A student can still enjoy all of our facilities and
+         3.1 Every student who enrolls at Galgotias University is automatically registered as a general member of the student body. Upon registering for one of our clubs
+            they become full time members, giving them access to all of our
+            services and to an organization which is able to represent them to the community and to the world beyond. They are also given the right and power to shape the
+            council’s direction through member feedback and annual meetings.\n\n
+            3.2 If for any reason a member does not wish to be a member of the council, they can opt out of membership at any time by emailing the Council HR department or
+            the Council Core team. A student can still enjoy all of our facilities and
             services if they opt out, but they cannot have a voice at membership meetings or other democratic activity.
         </item>
     </string-array>
 
     <string-array name="Constitution_CouncilsCoreTeam">
         <item>
-            4.1 There shall be a representative body that runs day to day activities of the clubs and societies. This representative body that forms the core of the council stay in direct administrative contact with the University management for introspection and successful execution of all student activities \n\n
+            4.1 There shall be a representative body that runs day to day activities of the clubs and societies. This representative body that forms the core of the council
+            stay in direct administrative contact with the University management for introspection and successful execution of all student activities \n\n
             4.2 Council Core shall consist of the appointed Council Executives. \n\n
             4.3 A Council meeting may be called by any of the following: \n\n
             4.3.1 The University Administration \n\n
@@ -180,11 +188,140 @@
             5.3.5 Regent Secretary (Head of Events) \n\n
             5.3.6 Deputy Regent Secretary (Deputy Head of Events) \n\n
             5.3.7 Ad Hoc Member \n\n
-            5.4 Only final year students of their respective courses shall be appointed to as Core Executives. No member of the Executive Core may hold any other position in the Council unless called upon in case of a deficit.
-            5.5 <b>The General Secretary (Chief Administrative Officer &amp; Principal Spokesperson)</b>– shall have full membership of the Council and shall be the principal spokesperson and chief administrative officer who
-                overlooks all the activities of the council. He/She shall be the chief representative of the students and shall have five main areas of responsibility: Finance, representation, organization, supervision and guidance of policy./n/n
-            5.6 <b>The Chief Secretary (Chief Operations Officer)</b>- shall have full membership of the Council and is the chief operations officer of the council.. He/she plays similar roles as the General Secretary and shall time to time act for and on behalf of the General Secretary and can take independent decisions upon consultation with the General Secretary.\n\n
+            5.4 Only final year students of their respective courses shall be appointed to as Core Executives. No member of the Executive Core may hold any other position in
+            the Council unless called upon in case of a deficit.\n\n
+            5.5 The General Secretary (Chief Administrative Officer &amp; Principal Spokesperson)– shall have full membership of the Council and shall be the principal spokesperson
+            and chief administrative officer who
+                overlooks all the activities of the council. He/She shall be the chief representative of the students and shall have five main areas of responsibility: Finance,
+            representation, organization, supervision and guidance of policy.\n\n
+            5.6 The Chief Secretary (Chief Operations Officer)- shall have full membership of the Council and is the chief operations officer of the council.. He/she plays similar
+            roles as the General Secretary and shall time to time act for and on behalf of the General Secretary and can take independent decisions upon consultation with the General Secretary.\n\n
 
+        </item>
+    </string-array>
+
+    <string name="faq1">How to be a part of Clubs?</string>
+    <string-array name="faq1">
+        <item>
+            Galgotias University is an organization which can help you showcase your talent to the community and to the world beyond. Two of the most essential things you
+            require to be a part of a club are-a talent and the courage to put it in front of everyone. Be it a fresher or a final year student, anyone can join the societies and student clubs.\n\n
+            Every student who enrols at the Galgotias University is automatically registered as a general member of the student body. Upon registering for one of our clubs, they become full
+            time members, giving them access to all of our services. The motive of every club at Galgotias University is to nurture every talent and help it groom. We hold auditions for
+            every club and registration desks are setup in college itself.
+            The auditions are headed over by the Clubs’ Head Co-ordinators and member of the core team who are the real example of perfection. Results of the audition are put up on the
+            official social media handles of Galgotias University. Come join us to be a part of something big.\n\n
+            Eligibility Criteria:-\n\n
+            •Must be enrolled in any program at Galgotias University.
+            •Basic Knowledge of the club in which applying to join.\n\n
+            How to Apply:-\n\n
+            A student can apply by filling up the registration form followed by the auditions for each club.
+        </item>
+    </string-array>
+
+    <string name="faq2">How to be a Club Coordinator?</string>
+    <string-array name="faq2">
+        <item>
+            Co-ordinators of any particular Students’ Club is one of the responsibility given to the hard working and dedicated member of that particular club. Co-ordinator is the
+            upgraded position given to the member of a particular club. Club Co-ordinators are the chief operator of their respective club; they run day to day activities of the
+            club and make decisions for the club.
+            Being a Co-ordinator needs to have a year experience as a member of a club. Co-ordinator of a club is a position appointed by the Head Co-ordinator of that club.
+            Head Co-ordinator of a club appoints the hard working and deserving member of that club as a Co-ordinator. She/he shall be the chief operator of the student and
+            shall have three main areas of responsibility: finance, representation and organization.\n\n
+            Eligibility Criteria: -\n\n
+            • Must be enrolled in any program at Galgotias University.\n\n
+            • Should be a part of the club in which applying for the position of Coordinator.\n\n
+            • Must have an experience of at least one year as the club member in which applying for the position of Coordinator.\n\n
+            How to Apply: -\n\n
+            A student can apply, if fulfilling the eligibility criteria, by submitting a copy of their work experience report as a club member, to the Head Co-ordinator
+            of their respective club at the time of vacancy opening for the next session at the end of the present session.
+        </item>
+    </string-array>
+
+    <string name="faq3">How to be a Club Head Coordinator?</string>
+    <string-array name="faq3">
+        <item>
+            Head Co-ordinator is the chief representative of that club and has two main areas of responsibility: supervision and guidance of policies. To be the
+            Head Co-ordinator of the club needs to have a year experience as a Co-ordinator of a club. Core of the Students’ Council appoints the Head Co-ordinator
+            on the basis of their leadership skills and activeness. Head Co-ordinator is not the boss of his team but the alpha they need.\n\n
+            Eligibility Criteria: -\n\n
+            • Must be enrolled in any program at Galgotias University.\n\n
+            • Should be a part of the club in which applying for the position of Co-ordinator.\n\n
+            • Must have an experience of at least one year as a Club Coordinator in which applying for the position of Head Coordinator.\n\n
+            How to Apply: -
+            A student can apply, if fulfilling the eligibility criteria, by submitting a copy of their work experience report as a Club Coordinator, to the Head
+            Co-ordinator of respective club at the time of vacancy opening for the next session at the end of the present session.
+        </item>
+    </string-array>
+
+    <string name="faq4">How to get into the Core Team?</string>
+    <string-array name="faq4">
+        <item>
+            Core or the Executives are the representatives of the institution. They represent the institution in or outside the campus. To become a member of
+            the Core team is a dream of every student in Galgotias University.
+            Core team is the epicentre of all the extracurricular activities at Galgotias University. Core manages the entire Students’ Club and their events. They also
+            look after the grand yearly fest at Galgotias i.e. Galgotias Unifest. Core Team consists of the members of prestigious Students’ Council who once represented a
+            club as a Head Co-ordinators and Co-ordinators.
+            The path to core is not an easy one; it requires dedication, hard work and perseverance to reach up to the prime position in the university. One needs to actively
+            participate from first year in University’s club activities. The progress marks made in a year should lead one to upper positions in hierarchy by becoming Club
+            Co-ordinators. With two years of experience and being aware of all the functionalities of club one should make it to become Head Co-ordinator of the club and
+            manage its activities with dedication and flawlessness, and finally if the person outshines other club heads all only because of his work and club legacy he/she
+            stands a chance of securing a position in prestigious Galgotias Core Team. Members in the core team are highly groomed with leadership skills. Apart from leadership
+            this team represents fineness in all sorts of soft skills namely oratory and communication. With maintaining University’s reputation in all inter college events its
+            top priority core team makes immense effort to bring laurel to the University. With a finely structured student body mechanism at Galgotias Core Team takes care of
+            all the needs of students at all levels and also helps them to address their concern to college administration.
+            Core Team is all about proper control and management of student interest clubs and activities at Galgotias University.\n\n
+            Eligibility Criteria: -\n\n
+            • Must be enrolled in any program at Galgotias University.\n\n
+            • Should be a part of any club at Galgotias University.\n\n
+            • Must have an experience of at least one year as the Club Head Coordinator.\n\n
+            • Should never be involved in any indisplinary act of University.\n\n
+            How to Apply: -\n\n
+            A student can apply, if fulfilling the eligibility criteria, by submitting a copy of their previous work experience report to the previous/ acting Core Team of the Student
+            Council at the time of the vacancy opening for the next session at the end of the present session.
+        </item>
+    </string-array>
+
+    <string name="faq5">How to start a club?</string>
+    <string-array name="faq5">
+        <item>
+            Galgotias Students’ Council is a family of 1500 students bounded as a family. A Club in the Students’ Council is not just a merger but a part,
+            a pillar beholding the Council. It’s very important for a club to coordinate with others and work as a whole.
+            To start a club in Galgotias University there are some policies and guidelines which needs to be followed:\n\n
+            • The person starting a club needs to have an experience of at least a year as a member of any club or society at Galgotias University unless called upon in case of deficit.\n\n
+            • The person starting the club shall submit a full itinerary and briefing of the club along with benefits to the Students and proper working to the General Secretary of Students’
+            Council.\n\n
+            • The club shall have at least two Head Co-ordinators, two Co-ordinators and five members.\n\n
+            • The club should not have the same working domain as of the existing clubs.\n\n
+            • The club will be first approved by the General Secretary of the Students’ Council before functioning officially.\n\n
+        </item>
+    </string-array>
+
+    <string name="faq6">How to become a Department Head-Coordinator?</string>
+    <string-array name="faq6">
+        <item>
+            Head-Coordinator of a Department is the representative of that particular department. Head Coordinator of any particular department shall bear the responsibility of all
+            the occurring events in that particular department. Only a dedicated and hardworking member of that department shall have that position.
+            Head Coordinator of a department handles all the events of that department and can seek help from the student clubs to conduct various activities in any particular department.
+            Main motive is to bring together everyone and create magic. Head Coordinator of a department is a position appointed by the collective decision made by that particular
+            Department and the Student Council Core Team.\n\n
+            Eligibility Criteria: -\n\n
+            • Must be enrolled in any program at Galgotias University.\n\n
+            • Should be a part of that department in which applying for the position of Department Head Coordinator\n\n
+            How to Apply: -\n\n
+            A student can apply, if fulfilling the eligibility criteria, by submitting a copy of their work experience report in Co-Curricular activities to their respective Deans as
+            well as to the Student Council Core Team, at the time of the vacancy opening for the next session at the end of the pressent session.
+        </item>
+    </string-array>
+
+    <string name="faq7">How to conduct an event at Galgotias University?</string>
+    <string-array name="faq7">
+        <item>
+            With a Count of 30+ clubs in our Students’ Council, Galgotias University is a hub of many festive events. Every club at Galgotias University conducts their event working
+            along with other club members. An event at Galgotias University is a result of combine effort of every club working together as family.\n\n
+            Guidelines to conduct an event at Galgotias University are:\n\n
+            • The person conducting the event shall submit a full itinerary and briefing of the event along with proper management and working to the General Secretary of Students’ Council.\n\n
+            • The person shall approach the Students’ Council for help, as help is always given at Galgotias University to those who ask for it.\n\n
+            • The event will be first approved by the General Secretary of the Students’ Council before functioning officially.\n\n
         </item>
     </string-array>
 

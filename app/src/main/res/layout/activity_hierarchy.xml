@@ -4,6 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HierarchyActivity">
+    tools:context=".HierarchyActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/lightred">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="HIERARCHY"
+            android:textColor="@color/text_white"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:fontFamily="@font/helveticaneue_bold"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="@drawable/hierarchy"/>
 
 </LinearLayout>
