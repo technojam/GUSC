@@ -77,14 +77,14 @@
                android:layout_marginTop="20dp"
                android:layout_marginStart="10dp"
                android:layout_marginEnd="10dp"
-               android:hint="Enrollment NO"
+               android:hint="Enrollment No"
                android:textSize="15sp"
                android:textStyle="normal"
                android:fontFamily="@font/helveticaneue_regular"
                android:textColorHint="@color/text_black"
                android:backgroundTint="@color/gray"
                android:singleLine="true"
-               android:inputType="number"/>
+               android:inputType="text"/>
 
            <EditText
                android:id="@+id/ContactNo"
@@ -109,7 +109,7 @@
                android:layout_marginTop="20dp"
                android:layout_marginStart="10dp"
                android:layout_marginEnd="10dp"
-               android:hint="Whatsapp NO"
+               android:hint="Whatsapp No"
                android:textSize="15sp"
                android:textStyle="normal"
                android:fontFamily="@font/helveticaneue_regular"
@@ -147,7 +147,6 @@
                    android:layout_gravity="center"
                    android:layout_weight="1.15"
                    android:layout_height="1dp"
-                   android:elevation="4dp"
                    android:background="@color/gray"/>
 
                <TextView
@@ -157,6 +156,7 @@
                    android:layout_gravity="center"
                    android:paddingStart="2dp"
                    android:paddingEnd="2dp"
+                   android:gravity="center"
                    android:text="Select Clubs"
                    android:textColor="@color/gray"
                    android:textStyle="normal" />
@@ -165,7 +165,6 @@
                    android:layout_width="0dp"
                    android:layout_gravity="center"
                    android:layout_weight="1.15"
-                   android:elevation="4dp"
                    android:layout_height="1dp"
                    android:background="@color/gray"/>
            </LinearLayout>
@@ -181,7 +180,7 @@
                app:cornerRadius="5dp"
                android:elevation="4dp"/>
 
-           <EditText
+           <TextView
                android:id="@+id/clubsSelected"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
@@ -216,7 +215,6 @@
            <View
                android:layout_width="match_parent"
                android:layout_gravity="center"
-               android:elevation="4dp"
                android:layout_marginTop="20dp"
                android:layout_marginStart="10dp"
                android:layout_marginEnd="10dp"
@@ -228,9 +226,11 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_gravity="center"
+               android:padding="10dp"
                android:text="Register Me"
                android:textColor="@color/text_black"
-               app:cornerRadius="5dp"
+               app:cornerRadius="10dp"
+               android:background="@color/colorPrimary"
                android:layout_marginTop="20dp"
                android:layout_marginBottom="30dp"/>
        </LinearLayout>

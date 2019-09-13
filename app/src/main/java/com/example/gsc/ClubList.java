@@ -1,5 +1,7 @@
 package com.example.gsc;
 
+import android.util.Log;
+
 import java.util.Arrays;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -10,7 +12,7 @@ public class ClubList {
     private String mPhoneno1,mPhoneno2,mClubName,mClubAbout,mHead1,mHead2,mEmail1,mEmail2;
     private int mClubHeadPic1, mClubHeadPic2;
 
-    public ClubList(int ClubLogo, String ClubName, String ClubAbout, String Head1, String Head2, String Email1, String Email2, String Phone1, String Phone2, int mClubHeadPic1, int mClubHeadPic2){
+    public ClubList(int ClubLogo, String ClubName, String ClubAbout, String Head1, String Head2, String Email1, String Email2, String Phone1, String Phone2, int ClubHeadPic1, int ClubHeadPic2){
         mClubLogo = ClubLogo;
         mClubName = ClubName;
         mClubAbout = ClubAbout;
@@ -42,18 +44,21 @@ public class ClubList {
         else
             mPhoneno2 = Phone2;
 
-        this.mClubHeadPic1 = mClubHeadPic1;
-        this.mClubHeadPic2 = mClubHeadPic2;
+        mClubHeadPic1 = ClubHeadPic1;
+
+        mClubHeadPic2 = ClubHeadPic2;
 
 
     }
 
 
     public int getmClubHeadPic1() {
+        Log.d("Log_test","the club head1 pic " + mClubHeadPic1);
         return mClubHeadPic1;
     }
 
     public int getmClubHeadPic2() {
+        Log.d("Log_test","the club head2 pic " + mClubHeadPic2);
         return mClubHeadPic2;
     }
 

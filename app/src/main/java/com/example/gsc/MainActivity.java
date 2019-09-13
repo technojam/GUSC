@@ -11,6 +11,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -23,17 +24,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
-        String ClubUID = "Technojam"+currentFirebaseUser.getUid();
-        /*Toast.makeText(this, "" + currentFirebaseUser.getUid(), Toast.LENGTH_SHORT).show();*/
-        Log.d("UID : -", String.format("UID :- " + currentFirebaseUser.getUid()));
-        Log.d("UID : -", String.format("UID :- " + ClubUID));
-
         BottomNavigationView bottomNavigation = findViewById(R.id.navigationView);
         bottomNavigation.setOnNavigationItemSelectedListener(nevListener);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
-
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener nevListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -66,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface arg0, int arg1) {
-                        finish();
+
+                        MainActivity.this.finish();
                     }
                 }).create().show();
     }

@@ -1,6 +1,7 @@
 package com.example.gsc;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,8 @@ class ExpandableAdapter extends BaseExpandableListAdapter {
     Context context;
     List<String> listGroup;
     HashMap<String, List<String>> listItem;
+
+    int mBlackTextColor = Color.parseColor("#000000");
 
     public ExpandableAdapter(Context context, List<String> listGroup, HashMap<String, List<String>> listItem) {
         this.context = context;
@@ -67,6 +70,7 @@ class ExpandableAdapter extends BaseExpandableListAdapter {
         }
         TextView textView = convertView.findViewById(R.id.list_parent);
         textView.setText(group);
+        textView.setTextSize(20);
         return convertView;
 
     }

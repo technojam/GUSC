@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,7 +55,14 @@ public class HeadsBottomClass extends BottomSheetDialogFragment  {
         if(headname1 != null)
         {
             Head1.setText(headname1);
-            mClubHeadPic1.setImageResource(clubHeadPic1);
+
+            Log.d("Log_test","the club head1 pic " + clubHeadPic1);
+
+            if (clubHeadPic1 == 0 )
+                mClubHeadPic1.setImageResource(R.drawable.face);
+            else
+                mClubHeadPic1.setImageResource(clubHeadPic1);
+
             // for mail
             if (email1 != null)
             {
@@ -91,7 +99,11 @@ public class HeadsBottomClass extends BottomSheetDialogFragment  {
         if (headname2 != null)
             {
                 Head2.setText(headname2);
-                mClubHeadPic2.setImageResource(clubHeadPic2);
+                Log.d("Log_test","the club head2 pic " + clubHeadPic2);
+                if (clubHeadPic2 == 0 )
+                    mClubHeadPic2.setImageResource(R.drawable.face);
+                else
+                    mClubHeadPic2.setImageResource(clubHeadPic2);
                 // for mail
 
                 if (email2 != null)

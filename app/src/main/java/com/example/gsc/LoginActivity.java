@@ -1,7 +1,9 @@
 package com.example.gsc;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -103,4 +105,19 @@ public class LoginActivity extends AppCompatActivity {
         super.onStart();
         mFirebaseAuth.addAuthStateListener(authStateListener);
     }
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Really Exit?")
+                .setMessage("Are you sure you want to exit?")
+                .setNegativeButton(android.R.string.no, null)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        /*mintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK );*/
+                        finish();
+                    }
+                }).create().show();
+    }
+
 }

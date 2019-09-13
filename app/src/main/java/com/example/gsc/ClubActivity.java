@@ -1,6 +1,9 @@
 package com.example.gsc;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,8 +44,8 @@ public class ClubActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 HeadsBottomClass headsbottomview = new HeadsBottomClass();
-                Bundle clubHeadNamesBundle = new Bundle();
 
+                Bundle clubHeadNamesBundle = new Bundle();
                 clubHeadNamesBundle.putString("head1",head1);
                 clubHeadNamesBundle.putString("head2",head2);
                 clubHeadNamesBundle.putString("email1",email1);

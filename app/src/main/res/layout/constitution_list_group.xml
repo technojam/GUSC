@@ -7,13 +7,14 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:id="@+id/list_parent"
-        android:textSize="25sp"
         android:textStyle="normal"
-        android:textColor="@color/lightred"
         android:background="@drawable/round_rectangle"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp"
-        android:gravity="center">
+        android:layout_marginStart="15dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="0dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/lightred"
+        android:gravity="center_vertical">
 
     </TextView>
 

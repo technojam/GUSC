@@ -25,9 +25,9 @@ public class RegistrationActivity extends AppCompatActivity {
 
 //----------------------------------- Variables ----------------------------------------------------
 
-    EditText mName, mAdmissionNo, mEnrollmentNo, mContactNo, mWhatsappNo, mEmailId, mSelectedeClubs;
+    EditText mName, mAdmissionNo, mEnrollmentNo, mContactNo, mWhatsappNo, mEmailId;
     Button mRegisterBtn,mSelectClubbtn;
-    TextView mFee;
+    TextView mFee,mSelectedeClubs;
     int mTotlaFee;
 
 
