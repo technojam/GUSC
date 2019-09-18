@@ -29,7 +29,7 @@ public class RegistrationActivity extends AppCompatActivity {
     Button mRegisterBtn,mSelectClubbtn;
     TextView mFee,mSelectedeClubs;
     int mTotlaFee;
-
+    String mClubName;
 
     String[] mClubsList;
     boolean[] checkedClubs;
@@ -59,11 +59,14 @@ public class RegistrationActivity extends AppCompatActivity {
 
         mClubsList = getResources().getStringArray(R.array.Clubs);
         checkedClubs = new boolean[mClubsList.length];
+
+        mClubName = getIntent().getStringExtra("clubname");
+        Log.d("Log_test", "onCreate: "+ mClubName);
 //--------------------------------------------------------------------------------------------------
 
 
 //--------------------------------- To Select Clubs ------------------------------------------------
-        mSelectClubbtn.setOnClickListener(new View.OnClickListener() {
+       /* mSelectClubbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -124,7 +127,10 @@ public class RegistrationActivity extends AppCompatActivity {
                 AlertDialog mDialog = mBuilder.create();
                 mDialog.show();
             }
-        });
+        });*/
+
+       mSelectedeClubs.setText(mClubName);
+       mFee.setText("Rs. 30.00");
 //--------------------------------------------------------------------------------------------------
 
 //------------------------------------ Firebase ----------------------------------------------------

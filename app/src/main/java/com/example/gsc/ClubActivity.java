@@ -2,15 +2,19 @@ package com.example.gsc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ClubActivity extends AppCompatActivity {
+
+    String clubName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +24,10 @@ public class ClubActivity extends AppCompatActivity {
         TextView mClubName = findViewById(R.id.clubName);
         ImageView mclubLogo = findViewById(R.id.clubLogo);
         TextView mAboutClub = findViewById(R.id.aboutclub);
+        Button mRegisterBtn = findViewById(R.id.RegistrationButton);
 
         int clubLogo = getIntent().getExtras().getInt("clubLogo");
-       final String clubName = getIntent().getStringExtra("ClubName");
+       clubName = getIntent().getStringExtra("ClubName");
        final String aboutClub = getIntent().getStringExtra("AboutClub");
 
         final String head1 = getIntent().getStringExtra("Head1");
@@ -60,10 +65,22 @@ public class ClubActivity extends AppCompatActivity {
             }
         });
 
+        mRegisterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ClubActivity.this, RegistrationActivity.class);
+                intent.putExtra("clubname",clubName);
+                Log.d("Log_test", "onClick: " + clubName);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
     protected void onPause() {
         super.onPause();
     }
+
+
 }

@@ -43,15 +43,15 @@ public class SignUpActivity extends AppCompatActivity {
                final String password = mPassword.getText().toString();
                 String confPassword = mconfPass.getText().toString();
                 if (email.isEmpty()){
-                    mEmail.setError("Please enter mail Id");
+                    mEmail.setError("Email Required");
                     mEmail.requestFocus();
                 }
                 else if (password.isEmpty()){
-                    mPassword.setError("Please enter password");
+                    mPassword.setError("Password Required");
                     mPassword.requestFocus();
                 }
                 else if (confPassword.isEmpty()){
-                    mPassword.setError("Please enter Conferm password");
+                    mPassword.setError("Confirm password Required");
                     mPassword.requestFocus();
                 }
                 else if(TextUtils.isEmpty(email) && TextUtils.isEmpty(password) && TextUtils.isEmpty(confPassword)){
@@ -63,7 +63,7 @@ public class SignUpActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (!task.isSuccessful()) {
-                                    Toast.makeText(SignUpActivity.this, "SignUp is Unsuccessfull, Please try again ", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(SignUpActivity.this, "SignUp is Unsuccessful, Please try again ", Toast.LENGTH_SHORT).show();
 
                                 } else {
                                     Log.d("Log_test", "create User With Email : Success");
