@@ -65,22 +65,10 @@ public class ClubActivity extends AppCompatActivity {
             }
         });
 
-        mRegisterBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ClubActivity.this, RegistrationActivity.class);
-                intent.putExtra("clubname",clubName);
-                Log.d("Log_test", "onClick: " + clubName);
-                startActivity(intent);
-            }
-        });
-
     }
 
     @Override
     protected void onPause() {
         super.onPause();
     }
-
-
 }
