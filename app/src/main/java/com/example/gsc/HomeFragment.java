@@ -41,7 +41,16 @@ public class HomeFragment extends Fragment {
         final View view =  inflater.inflate(R.layout.fragment_home,container,false);
 
         ImageButton mMenuBtn = view.findViewById(R.id.aboutmenu);
+
         mAuth = FirebaseAuth.getInstance();
+
+/*
+        // to show a view after auth
+        if(mAuth.getCurrentUser() != null) {
+            if (mAuth.getCurrentUser().getUid().equals("k2lF12xwmyZrN2Etm7rKfO10RdL2")) {
+                mTest.setVisibility(View.VISIBLE);
+            }
+        }*/
 
         mMenuBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,19 +94,16 @@ public class HomeFragment extends Fragment {
                                 maboutdialog.show();
                                 break;
                             case R.id.logout:
-                                Log.d("Log_test","logout button is clicked");
 
                                 mAuth.signOut();
-                                getActivity().finish();
-
+                                Log.d("Log_test","User signed oud");
                                 Intent mintent =  new Intent(getActivity(),LoginActivity.class);
                                 // to kill all activity stack
                                 mintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-                                /*mintent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);*/
-                               /* mintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK );*/
                                 startActivity(mintent);
-                                getActivity().finish();
-                                break;
+                                getActivity().finishAffinity();
+
+
                         }
                         Log.d("Log_test",getActivity().toString());
                         return false;
@@ -150,7 +156,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        Button mRegistration = view.findViewById(R.id.registrationbtn);
+       /* Button mRegistration = view.findViewById(R.id.registrationbtn);
 
         mRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -158,7 +164,9 @@ public class HomeFragment extends Fragment {
                 Intent intent = new Intent(getActivity(),RegistrationActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
+
+
 
         return view;
     }

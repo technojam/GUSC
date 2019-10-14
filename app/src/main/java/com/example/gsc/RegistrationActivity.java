@@ -1,5 +1,6 @@
 package com.example.gsc;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -13,11 +14,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
@@ -25,16 +32,20 @@ public class RegistrationActivity extends AppCompatActivity {
 
 //----------------------------------- Variables ----------------------------------------------------
 
-    EditText mName, mAdmissionNo, mEnrollmentNo, mContactNo, mWhatsappNo, mEmailId;
-    Button mRegisterBtn,mSelectClubbtn;
-    TextView mFee,mSelectedeClubs;
-    int mTotlaFee;
-    String mClubName;
+   private EditText mName, mAdmissionNo, mEnrollmentNo, mContactNo, mWhatsappNo, mEmailId;
+   private Button mRegisterBtn, mSelectClubbtn;
+   private TextView mFee, mSelectedeClubs;
+   private int mTotlaFee;
+   private String mClubName, Uid;
 
-    String[] mClubsList;
-    boolean[] checkedClubs;
-    ArrayList<Integer> mClubs = new ArrayList<>();
-    DatabaseReference databaseStudent;
+   private FirebaseFirestore database;
+   private FirebaseAuth mAuth;
+
+   private String[] mClubsList;
+   private boolean[] checkedClubs;
+    /*ArrayList<Integer> mClubs = new ArrayList<>();
+    DatabaseReference databaseStudent;*/
+
 
 //--------------------------------------------------------------------------------------------------
 
@@ -52,7 +63,7 @@ public class RegistrationActivity extends AppCompatActivity {
         mWhatsappNo = findViewById(R.id.WhatsappNo);
         mEmailId = findViewById(R.id.EmailId);
         mRegisterBtn = findViewById(R.id.registerbtn);
-        mSelectClubbtn = findViewById(R.id.selectClub);
+        /*mSelectClubbtn = findViewById(R.id.selectClub);*/
         mSelectedeClubs = findViewById(R.id.clubsSelected);
         mFee = findViewById(R.id.Fee);
         mTotlaFee = 0;
@@ -61,7 +72,7 @@ public class RegistrationActivity extends AppCompatActivity {
         checkedClubs = new boolean[mClubsList.length];
 
         mClubName = getIntent().getStringExtra("clubname");
-        Log.d("Log_test", "onCreate: "+ mClubName);
+        Log.d("Log_test", "onCreate: " + mClubName);
 //--------------------------------------------------------------------------------------------------
 
 
@@ -129,57 +140,106 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });*/
 
-       mSelectedeClubs.setText(mClubName);
-       mFee.setText("Rs. 30.00");
+        mSelectedeClubs.setText(mClubName);
+        mFee.setText("Rs. 30.00");
 //--------------------------------------------------------------------------------------------------
 
 //------------------------------------ Firebase ----------------------------------------------------
 
-        databaseStudent = FirebaseDatabase.getInstance().getReference("Students");
-
+        database = FirebaseFirestore.getInstance();
+        mAuth = FirebaseAuth.getInstance();
         mRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
-                DatabaseReference userNameRef = rootRef.child("Students").child("mAdmissionNo");
-                ValueEventListener eventListener = new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        if (!dataSnapshot.exists()) {
-                            addStudent();
-                        }
-                    }
+            public void onClick(View view) {
+                String name = mName.getText().toString().trim();
+                String admission_No = mAdmissionNo.getText().toString().trim();
+                String enroll_No = mEnrollmentNo.getText().toString().trim();
+                String contact_No = mContactNo.getText().toString().trim();
+                String whatsapp_No = mWhatsappNo.getText().toString().trim();
+                String emailId = mEmailId.getText().toString().trim();
 
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                        Log.d("Log_test", databaseError.getMessage());
-                    }
-                };
-                userNameRef.addListenerForSingleValueEvent(eventListener);
+                Uid = mAuth.getUid();
+
+                if(database.collection("Clubs").document(mClubName).collection("Registered Student").document(Uid).getId().equals(Uid)) {
+                    Toast.makeText(RegistrationActivity.this, "Already Registered", Toast.LENGTH_SHORT).show();
+                }
+                else if (!validateInput(name, admission_No, enroll_No, contact_No, whatsapp_No, emailId)) {
+
+                    DocumentReference dbReference = collectionReference("Clubs", mClubName, "Registered Student").document(Uid);
+
+                    RegisterStudent mRegisterStudent = new RegisterStudent(
+                            name,
+                            admission_No,
+                            enroll_No,
+                            emailId,
+                            mClubName,
+                            Integer.parseInt(contact_No),
+                            Integer.parseInt(whatsapp_No)
+                    );
+
+                    dbReference.set(mRegisterStudent)
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    Toast.makeText(RegistrationActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(RegistrationActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
+                }
             }
         });
 
     }
-
 //-------------------------------- Add Student to Firebase -----------------------------------------
 
-    private void addStudent(){
-        String name = mName.getText().toString().trim();
-        String admission_No = mAdmissionNo.getText().toString().trim();
-        String enroll_No = mEnrollmentNo.getText().toString().trim();
-        String contact_No = mContactNo.getText().toString().trim();
-        String whatsapp_No = mWhatsappNo.getText().toString().trim();
-        String emailId = mEmailId.getText().toString().trim();
+    private CollectionReference collectionReference(String collection, String document, String doc_collection){
 
-        if(!TextUtils.isEmpty(name) && !TextUtils.isEmpty(admission_No) && !TextUtils.isEmpty(enroll_No) && !TextUtils.isEmpty(contact_No) && !TextUtils.isEmpty(whatsapp_No) && !TextUtils.isEmpty(emailId)){
+        CollectionReference databaseRegisterStudent = database.collection(collection)
+                .document(document)
+                .collection(doc_collection);
 
-            StrudentInfo mstudent = new StrudentInfo(name, admission_No, enroll_No, contact_No, whatsapp_No, emailId, mTotlaFee);
+        return databaseRegisterStudent;
+    }
 
-            databaseStudent.child(admission_No).setValue(mstudent);
-            
+//--------------------------------------Validation--------------------------------------------------
+
+    private boolean validateInput(String name, String admissionNo, String enrollmentNo, String contactNo, String whatssppNo, String email){
+        if(TextUtils.isEmpty(name)){
+            mName.setError("Name Required");
+            mName.requestFocus();
+            return true;
         }
-        else {
-            Toast.makeText(RegistrationActivity.this, "Fill All Fields", Toast.LENGTH_SHORT).show();
+        if(TextUtils.isEmpty(admissionNo)){
+            mAdmissionNo.setError("Admission No. Required");
+            mAdmissionNo.requestFocus();
+            return true;
         }
+        if(TextUtils.isEmpty(enrollmentNo)){
+            mEnrollmentNo.setError("Enrollment No. Required");
+            mEnrollmentNo.requestFocus();
+            return true;
+        }
+        if(TextUtils.isEmpty(contactNo)){
+            mContactNo.setError("Contact Required");
+            mContactNo.requestFocus();
+            return true;
+        }
+        if(TextUtils.isEmpty(whatssppNo)){
+            mWhatsappNo.setError("Whatsapp No. Required");
+            mWhatsappNo.requestFocus();
+            return true;
+        }
+        if(TextUtils.isEmpty(email)){
+            mEmailId.setError("Email Required");
+            mEmailId.requestFocus();
+            return true;
+        }
+        return false;
     }
 }

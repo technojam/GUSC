@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">GSC</string>
     <array name="Clubs">
         <item>Technojam</item>
         <item>Frag</item>
@@ -7,6 +6,7 @@
         <item>gu management</item>
         <item>gpost</item>
     </array>
+    <string name="app_name">GSC</string>
 
     <string name="test_string">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard
         dummy text ever sincethe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries </string>
@@ -128,6 +128,19 @@
     <string name="Constitution_CouncilsCoreTeam">Councils Core Team</string>
     <string name="Constitution_The_Executive">The Executive</string>
 
+    <string name="faq1">How to be a part of Clubs?</string>
+
+    <string name="faq2">How to be a Club Coordinator?</string>
+
+    <string name="faq3">How to be a Club Head Coordinator?</string>
+
+    <string name="faq4">How to get into the Core Team?</string>
+
+    <string name="faq5">How to start a club?</string>
+
+    <string name="faq6">How to become a Department Head-Coordinator?</string>
+    <string name="faq7">How to conduct an event at Galgotias University?</string>
+
     <string-array name="Constitution_Preamble">
         <item>Galgotias University Student Council is a conglomerate of students’ clubs and societies at Galgotias University. The council is a part of the University
             administrative and academic structure
@@ -138,7 +151,6 @@
 
         </item>
     </string-array>
-
     <string-array name="Constitution_Declaration">
         <item>The student’s Council does not act independently under any circumstances, any new agenda is presented to the University Administration in form of a written
             report and is not acted upon unless approved.
@@ -160,7 +172,6 @@
             services if they opt out, but they cannot have a voice at membership meetings or other democratic activity.
         </item>
     </string-array>
-
     <string-array name="Constitution_CouncilsCoreTeam">
         <item>
             4.1 There shall be a representative body that runs day to day activities of the clubs and societies. This representative body that forms the core of the council
@@ -199,8 +210,6 @@
 
         </item>
     </string-array>
-
-    <string name="faq1">How to be a part of Clubs?</string>
     <string-array name="faq1">
         <item>
             Galgotias University is an organization which can help you showcase your talent to the community and to the world beyond. Two of the most essential things you
@@ -218,7 +227,6 @@
         </item>
     </string-array>
 
-    <string name="faq2">How to be a Club Coordinator?</string>
     <string-array name="faq2">
         <item>
             Co-ordinators of any particular Students’ Club is one of the responsibility given to the hard working and dedicated member of that particular club. Co-ordinator is the
@@ -236,8 +244,6 @@
             of their respective club at the time of vacancy opening for the next session at the end of the present session.
         </item>
     </string-array>
-
-    <string name="faq3">How to be a Club Head Coordinator?</string>
     <string-array name="faq3">
         <item>
             Head Co-ordinator is the chief representative of that club and has two main areas of responsibility: supervision and guidance of policies. To be the
@@ -253,7 +259,6 @@
         </item>
     </string-array>
 
-    <string name="faq4">How to get into the Core Team?</string>
     <string-array name="faq4">
         <item>
             Core or the Executives are the representatives of the institution. They represent the institution in or outside the campus. To become a member of
@@ -280,8 +285,6 @@
             Council at the time of the vacancy opening for the next session at the end of the present session.
         </item>
     </string-array>
-
-    <string name="faq5">How to start a club?</string>
     <string-array name="faq5">
         <item>
             Galgotias Students’ Council is a family of 1500 students bounded as a family. A Club in the Students’ Council is not just a merger but a part,
@@ -296,7 +299,6 @@
         </item>
     </string-array>
 
-    <string name="faq6">How to become a Department Head-Coordinator?</string>
     <string-array name="faq6">
         <item>
             Head-Coordinator of a Department is the representative of that particular department. Head Coordinator of any particular department shall bear the responsibility of all
@@ -312,8 +314,6 @@
             well as to the Student Council Core Team, at the time of the vacancy opening for the next session at the end of the pressent session.
         </item>
     </string-array>
-
-    <string name="faq7">How to conduct an event at Galgotias University?</string>
     <string-array name="faq7">
         <item>
             With a Count of 30+ clubs in our Students’ Council, Galgotias University is a hub of many festive events. Every club at Galgotias University conducts their event working

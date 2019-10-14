@@ -22,6 +22,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
+    String TAG = "Log_test";
+
     EditText mEmailId, mPassword;
     Button mLoginBtn;
     TextView mSignUpbtn;
@@ -44,12 +46,19 @@ public class LoginActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(user != null){
-                    Toast.makeText(LoginActivity.this,"User Logged in",Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(LoginActivity.this,MainActivity.class));
-                    finish();
+                    if(user.isEmailVerified()){
+                        Log.d(TAG, "Email - "+user.getEmail() + "  Activity - "+ this.toString() + "Verification - "+user.isEmailVerified()+" User loged in");
+                        startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                        finish();
+                    }
+                    else{
+                        Log.d(TAG, "Email - "+user.getEmail() + "  Activity - "+ this.toString() + "Verification - "+user.isEmailVerified());
+                    }
+
                 }
                 else {
                     Toast.makeText(LoginActivity.this,"Loggin to continue",Toast.LENGTH_SHORT).show();
+                    Log.d(TAG, "Email - " + "  Activity - "+ this.toString() + " Try again to login");
                 }
             }
         };
@@ -81,7 +90,20 @@ public class LoginActivity extends AppCompatActivity {
                                     }
                                     else{
                                         Log.d("Log_test","sign in with email is Success");
-                                        startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                                        if(mFirebaseAuth.getCurrentUser() != null){
+                                            if(mFirebaseAuth.getCurrentUser().isEmailVerified()){
+                                                Log.d(TAG, "Email - "+mFirebaseAuth.getCurrentUser().getEmail() + "  Activity - "+ this.toString() + "Verification - "+mFirebaseAuth.getCurrentUser().isEmailVerified()+" User loged in");
+                                                startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                                                finish();
+                                            }
+                                            else{
+                                                Log.d(TAG, "Email - "+mFirebaseAuth.getCurrentUser().getEmail() + "  Activity - "+ this.toString() + "Verification - "+mFirebaseAuth.getCurrentUser().isEmailVerified());
+                                                Intent intent = new Intent(LoginActivity.this, VerificationActivity.class);
+                                                intent.putExtra("Email", mFirebaseAuth.getCurrentUser().getEmail());
+                                                startActivity(intent);
+                                            }
+
+                                        }
                                     }
                                 }
                             });
@@ -114,8 +136,7 @@ public class LoginActivity extends AppCompatActivity {
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface arg0, int arg1) {
-                        /*mintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK );*/
-                        finish();
+                        finishAffinity();
                     }
                 }).create().show();
     }

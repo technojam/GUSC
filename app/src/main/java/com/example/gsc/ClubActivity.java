@@ -11,10 +11,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+import com.github.clans.fab.FloatingActionButton;
+import com.github.clans.fab.FloatingActionMenu;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class ClubActivity extends AppCompatActivity {
 
-    String clubName;
+    private String clubName;
+    private FirebaseAuth mAuth;
+    FloatingActionMenu mFab;
+    FloatingActionButton mFab1;
+    private boolean isFabOpen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +32,15 @@ public class ClubActivity extends AppCompatActivity {
         TextView mClubName = findViewById(R.id.clubName);
         ImageView mclubLogo = findViewById(R.id.clubLogo);
         TextView mAboutClub = findViewById(R.id.aboutclub);
+        Button mHeadsBtn = findViewById(R.id.HeadsButton);
+        Button mPhotoBtn = findViewById(R.id.PhotosButton);
         Button mRegisterBtn = findViewById(R.id.RegistrationButton);
+        mFab1 = findViewById(R.id.fab1);
+        mFab = findViewById(R.id.menu);
 
         int clubLogo = getIntent().getExtras().getInt("clubLogo");
-       clubName = getIntent().getStringExtra("ClubName");
-       final String aboutClub = getIntent().getStringExtra("AboutClub");
+        clubName = getIntent().getStringExtra("ClubName");
+        final String aboutClub = getIntent().getStringExtra("AboutClub");
 
         final String head1 = getIntent().getStringExtra("Head1");
         final String head2 = getIntent().getStringExtra("Head2");
@@ -40,35 +52,67 @@ public class ClubActivity extends AppCompatActivity {
         final int mClubHeadPic2 = getIntent().getExtras().getInt("ClubHeadPic2");
 
 
-        mclubLogo.setImageResource(clubLogo);
-        mClubName.setText(clubName);
-        mAboutClub.setText(aboutClub);
+//-------------------------------------hide element-------------------------------------------------
 
-        Button mHeadsBtn = findViewById(R.id.HeadsButton);
-        mHeadsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                HeadsBottomClass headsbottomview = new HeadsBottomClass();
+        mAuth = FirebaseAuth.getInstance();
 
-                Bundle clubHeadNamesBundle = new Bundle();
-                clubHeadNamesBundle.putString("head1",head1);
-                clubHeadNamesBundle.putString("head2",head2);
-                clubHeadNamesBundle.putString("email1",email1);
-                clubHeadNamesBundle.putString("email2",email2);
-                clubHeadNamesBundle.putString("phone1",phone1);
-                clubHeadNamesBundle.putString("phone2",phone2);
-                clubHeadNamesBundle.putInt("clubHeadPic1",mClubHeadPic1);
-                clubHeadNamesBundle.putInt("clubHeadPic2",mClubHeadPic2);
 
-                headsbottomview.setArguments(clubHeadNamesBundle);
-                headsbottomview.show(getSupportFragmentManager(),"HeadsBottomView");
+        // to show a view after auth
+        if (mAuth.getCurrentUser() != null) {
+            if (mAuth.getCurrentUser().getUid().equals("k2lF12xwmyZrN2Etm7rKfO10RdL2")) {
+                mFab.setVisibility(View.VISIBLE);
             }
-        });
 
-    }
+            mFab1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
-    @Override
-    protected void onPause() {
-        super.onPause();
+                }
+            });
+
+            mclubLogo.setImageResource(clubLogo);
+            mClubName.setText(clubName);
+            mAboutClub.setText(aboutClub);
+
+
+            mHeadsBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    HeadsBottomClass headsbottomview = new HeadsBottomClass();
+
+                    Bundle clubHeadNamesBundle = new Bundle();
+                    clubHeadNamesBundle.putString("head1", head1);
+                    clubHeadNamesBundle.putString("head2", head2);
+                    clubHeadNamesBundle.putString("email1", email1);
+                    clubHeadNamesBundle.putString("email2", email2);
+                    clubHeadNamesBundle.putString("phone1", phone1);
+                    clubHeadNamesBundle.putString("phone2", phone2);
+                    clubHeadNamesBundle.putInt("clubHeadPic1", mClubHeadPic1);
+                    clubHeadNamesBundle.putInt("clubHeadPic2", mClubHeadPic2);
+
+                    headsbottomview.setArguments(clubHeadNamesBundle);
+                    headsbottomview.show(getSupportFragmentManager(), "HeadsBottomView");
+                }
+            });
+
+
+            mPhotoBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(ClubActivity.this, "", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            mRegisterBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(ClubActivity.this, RegistrationActivity.class);
+                    intent.putExtra("clubname", clubName);
+                    startActivity(intent);
+                }
+            });
+
+        }
+
     }
 }

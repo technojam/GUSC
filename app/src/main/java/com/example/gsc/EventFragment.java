@@ -34,6 +34,7 @@ public class EventFragment extends Fragment {
 
         mTabLayout = rootView.findViewById(R.id.EventTab);
         mViewPager= rootView.findViewById(R.id.viewPager);
+
         mfragmentPagerAdapter = new FragmentTabAdapter(this.getChildFragmentManager());
         mViewPager.setAdapter(mfragmentPagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);

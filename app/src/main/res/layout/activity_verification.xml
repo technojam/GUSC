@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VerificationActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Verify your Email"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textColor="@color/text_black"
+        android:fontFamily="@font/helveticaneue_regular" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:background="@drawable/round_rectangle"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textColorHint="@color/text_black"
+            android:textColor="@color/text_black"
+            android:layout_margin="20dp"/>
+
+        <Button
+            android:id="@+id/vreify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:elevation="4dp"
+            android:text="Verify"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

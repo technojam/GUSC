@@ -16,8 +16,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SignUpActivity extends AppCompatActivity {
+
+    String TAG = "Log_test";
+
 
     EditText mEmail, mPassword, mconfPass;
     Button mSignUpbtn;
@@ -46,8 +50,10 @@ public class SignUpActivity extends AppCompatActivity {
                     mEmail.setError("Email Required");
                     mEmail.requestFocus();
                 }
-                else if (password.isEmpty()){
-                    mPassword.setError("Password Required");
+                else if (password.length()<=8 && !password.matches("[A-Z]*") && !password.matches("[a-z]*") && !password.matches("[0-9]*") && !(password.contains("AND") || password.contains("NOT"))){
+                    mPassword.setError("Password Required\nPassword is to sort\nThere must be at least A-Z\n" +
+                            "There must be at least a-z\n" +
+                            "There must be at least 0-9");
                     mPassword.requestFocus();
                 }
                 else if (confPassword.isEmpty()){
@@ -64,11 +70,23 @@ public class SignUpActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (!task.isSuccessful()) {
                                     Toast.makeText(SignUpActivity.this, "SignUp is Unsuccessful, Please try again ", Toast.LENGTH_SHORT).show();
+                                    Log.d(TAG, "Email - "+"Activity - "+ this.toString() + " SignUp is Unsuccessful, Please try again");
 
-                                } else {
-                                    Log.d("Log_test", "create User With Email : Success");
-                                    startActivity(new Intent(SignUpActivity.this, MainActivity.class));
-
+                                }
+                                else {
+                                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                    if (user != null){
+                                        user.sendEmailVerification()
+                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<Void> task) {
+                                                        if (task.isSuccessful()){
+                                                            Log.d(TAG, "Email - "+FirebaseAuth.getInstance().getCurrentUser().getEmail() + "Activity - "+ this.toString() + " SignUp is Successful");
+                                                            startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
+                                                        }
+                                                    }
+                                                });
+                                    }
                                 }
                             }
                         });
