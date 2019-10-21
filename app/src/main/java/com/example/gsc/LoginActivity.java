@@ -89,7 +89,6 @@ public class LoginActivity extends AppCompatActivity {
                                         Toast.makeText(LoginActivity.this,"Email or Password is Wrong",Toast.LENGTH_SHORT).show();
                                     }
                                     else{
-                                        Log.d("Log_test","sign in with email is Success");
                                         if(mFirebaseAuth.getCurrentUser() != null){
                                             if(mFirebaseAuth.getCurrentUser().isEmailVerified()){
                                                 Log.d(TAG, "Email - "+mFirebaseAuth.getCurrentUser().getEmail() + "  Activity - "+ this.toString() + "Verification - "+mFirebaseAuth.getCurrentUser().isEmailVerified()+" User loged in");
@@ -98,9 +97,34 @@ public class LoginActivity extends AppCompatActivity {
                                             }
                                             else{
                                                 Log.d(TAG, "Email - "+mFirebaseAuth.getCurrentUser().getEmail() + "  Activity - "+ this.toString() + "Verification - "+mFirebaseAuth.getCurrentUser().isEmailVerified());
-                                                Intent intent = new Intent(LoginActivity.this, VerificationActivity.class);
+                                                /*Intent intent = new Intent(LoginActivity.this, VerificationActivity.class);
                                                 intent.putExtra("Email", mFirebaseAuth.getCurrentUser().getEmail());
                                                 startActivity(intent);
+                                                finish();*/
+                                                new AlertDialog.Builder(LoginActivity.this)
+                                                        .setTitle("Email not verified!")
+                                                        .setMessage(mFirebaseAuth.getCurrentUser().getEmail() + "\nis not verified click on verify to verify your email")
+                                                        .setNegativeButton("Cancel", null)
+                                                        .setPositiveButton("Verify", new DialogInterface.OnClickListener() {
+
+                                                            public void onClick(DialogInterface arg0, int arg1) {
+
+                                                                if(mFirebaseAuth.getCurrentUser() != null){
+                                                                    mFirebaseAuth.getCurrentUser().sendEmailVerification()
+                                                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                                @Override
+                                                                                public void onComplete(@NonNull Task<Void> task) {
+                                                                                    Log.d(TAG, "Email - "+FirebaseAuth.getInstance().getCurrentUser().getEmail() + "Activity - "+ this.toString() + " Email is sent");
+                                                                                    Toast.makeText(LoginActivity.this, "Email Sent Successfully! Check Your Mail", Toast.LENGTH_SHORT).show();
+                                                                                }
+                                                                            });
+                                                                }
+                                                                else {
+                                                                    Toast.makeText(LoginActivity.this, "Network Problem! Try Again", Toast.LENGTH_SHORT).show();
+                                                                    Log.d(TAG, "Email - "+FirebaseAuth.getInstance().getCurrentUser().getEmail() + "Activity - "+ this.toString() + " Email not sent");
+                                                                }
+                                                            }
+                                                        }).create().show();
                                             }
 
                                         }
@@ -109,7 +133,7 @@ public class LoginActivity extends AppCompatActivity {
                             });
                 }
                 else {
-                    Toast.makeText(LoginActivity.this,"Error! Please Try Again",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this,"Network Error! Please Try Again",Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -81,7 +81,8 @@ public class SignUpActivity extends AppCompatActivity {
                                                     @Override
                                                     public void onComplete(@NonNull Task<Void> task) {
                                                         if (task.isSuccessful()){
-                                                            Log.d(TAG, "Email - "+FirebaseAuth.getInstance().getCurrentUser().getEmail() + "Activity - "+ this.toString() + " SignUp is Successful");
+                                                            Log.d(TAG, "Email - "+FirebaseAuth.getInstance().getCurrentUser().getEmail() + "Activity - "+ this.toString() + " SignUp is Successful" + "the email is sent");
+                                                            Toast.makeText(SignUpActivity.this, "Email Sent Successfully! Check Your Mail", Toast.LENGTH_SHORT).show();
                                                             startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
                                                         }
                                                     }

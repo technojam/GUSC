@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -24,9 +26,7 @@ public class VerificationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verification);
 
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
-
-        final EditText mEmail = findViewById(R.id.Email);
+        final TextView mEmail = findViewById(R.id.Email);
         Button mVerifyBtn = findViewById(R.id.vreify);
 
         final String Email = getIntent().getStringExtra("Email");
@@ -48,6 +48,7 @@ public class VerificationActivity extends AppCompatActivity {
                                 });
                     }
                 else {
+                    Toast.makeText(VerificationActivity.this, "Some Network Problem!", Toast.LENGTH_SHORT).show();
                     Log.d(TAG, "Email - "+FirebaseAuth.getInstance().getCurrentUser().getEmail() + "Activity - "+ this.toString() + " Email not sent");
                 }
                 }
