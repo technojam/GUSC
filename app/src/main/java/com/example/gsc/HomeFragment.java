@@ -1,6 +1,7 @@
 package com.example.gsc;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -95,7 +96,12 @@ public class HomeFragment extends Fragment {
                                 break;
                             case R.id.logout:
 
+                                final ProgressDialog progressDialog = new ProgressDialog(getActivity());
+                                progressDialog.setTitle("Loging off...");
+                                progressDialog.show();
+
                                 mAuth.signOut();
+                                progressDialog.dismiss();
                                 Log.d("Log_test","User signed oud");
                                 Intent mintent =  new Intent(getActivity(),LoginActivity.class);
                                 // to kill all activity stack

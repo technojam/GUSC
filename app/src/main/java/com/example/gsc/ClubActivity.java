@@ -56,14 +56,18 @@ public class ClubActivity extends AppCompatActivity {
 
         // to show a view after auth
         if (mAuth.getCurrentUser() != null) {
-            if (mAuth.getCurrentUser().getUid().equals("k2lF12xwmyZrN2Etm7rKfO10RdL2")) {
+            if (mAuth.getCurrentUser().getUid().equals("k2lF12xwmyZrN2Etm7rKfO10RdL2" ) || mAuth.getCurrentUser().getUid().equals("2NUaYkzscvXNSoA8OZj9Y9niwbp2")) {
                 mFab.setVisibility(View.VISIBLE);
+                mRegisterBtn.setText("Add Student");
             }
 
             mFab1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
+                    Intent intent = new Intent(ClubActivity.this, CreateEventActivity.class);
+                    intent.putExtra("clubname", clubName);
+                    startActivity(intent);
+                    finish();
                 }
             });
 
@@ -106,6 +110,7 @@ public class ClubActivity extends AppCompatActivity {
                     Intent intent = new Intent(ClubActivity.this, RegistrationActivity.class);
                     intent.putExtra("clubname", clubName);
                     startActivity(intent);
+                    finish();
                 }
             });
 

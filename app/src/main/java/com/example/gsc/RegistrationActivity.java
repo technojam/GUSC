@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -158,14 +159,21 @@ public class RegistrationActivity extends AppCompatActivity {
                 String whatsapp_No = mWhatsappNo.getText().toString().trim();
                 String emailId = mEmailId.getText().toString().trim();
 
-                Uid = mAuth.getUid();
 
-                if(database.collection("Clubs").document(mClubName).collection("Registered Student").document(Uid).getId().equals(Uid)) {
+                if(database.collection("Clubs").document(mClubName).collection("Registered Student").document(Uid).equals(Uid)) {
+                    Log.d("Log_test","Id = "+ database.collection("Clubs").document(mClubName).collection("Registered Student").document(Uid).getId()+ " Uid = " + Uid);
                     Toast.makeText(RegistrationActivity.this, "Already Registered", Toast.LENGTH_SHORT).show();
                 }
                 else if (!validateInput(name, admission_No, enroll_No, contact_No, whatsapp_No, emailId)) {
 
-                    DocumentReference dbReference = collectionReference("Clubs", mClubName, "Registered Student").document(Uid);
+                    final ProgressDialog progressDialog = new ProgressDialog(RegistrationActivity.this);
+                    progressDialog.setTitle("Registering...");
+                    progressDialog.show();
+
+                    Uid = mAuth.getUid();
+
+                    Log.d("Log_test","Id = "+ database.collection("Clubs").document(mClubName).collection("Registered Student").document(Uid).getParent()+ " Uid = " + Uid);
+                    DocumentReference dbReference = collectionReference("Clubs", mClubName, "Registered Student").document(name);
 
                     RegisterStudent mRegisterStudent = new RegisterStudent(
                             name,
@@ -173,20 +181,22 @@ public class RegistrationActivity extends AppCompatActivity {
                             enroll_No,
                             emailId,
                             mClubName,
-                            Integer.parseInt(contact_No),
-                            Integer.parseInt(whatsapp_No)
+                            Long.parseLong(contact_No),
+                            Long.parseLong(whatsapp_No)
                     );
 
                     dbReference.set(mRegisterStudent)
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
+                                    progressDialog.dismiss();
                                     Toast.makeText(RegistrationActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
                                 }
                             })
                             .addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
+                                    progressDialog.dismiss();
                                     Toast.makeText(RegistrationActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             });

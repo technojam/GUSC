@@ -3,13 +3,13 @@ package com.example.gsc;
 public class RegisterStudent {
 
     private String mName, mAdmissionNo, mEnrollmentNo, mEmailId, mClubName;
-    private int mContactNo, mWhatsappNo;
+    private Long mContactNo, mWhatsappNo;
 
     public RegisterStudent(){
 
     }
 
-    public RegisterStudent(String mName, String mAdmissionNo, String mEnrollmentNo, String mEmailId, String mClubName, int mContactNo, int mWhatsappNo) {
+    public RegisterStudent(String mName, String mAdmissionNo, String mEnrollmentNo, String mEmailId, String mClubName, Long mContactNo, Long mWhatsappNo) {
         this.mName = mName;
         this.mAdmissionNo = mAdmissionNo;
         this.mEnrollmentNo = mEnrollmentNo;
@@ -39,11 +39,11 @@ public class RegisterStudent {
         return mClubName;
     }
 
-    public int getmContactNo() {
+    public Long getmContactNo() {
         return mContactNo;
     }
 
-    public int getmWhatsappNo() {
+    public Long getmWhatsappNo() {
         return mWhatsappNo;
     }
 }

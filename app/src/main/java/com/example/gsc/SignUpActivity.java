@@ -1,5 +1,6 @@
 package com.example.gsc;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,21 +47,30 @@ public class SignUpActivity extends AppCompatActivity {
                 String email = mEmail.getText().toString();
                final String password = mPassword.getText().toString();
                 String confPassword = mconfPass.getText().toString();
+
+                final ProgressDialog progressDialog = new ProgressDialog(SignUpActivity.this);
+                progressDialog.setTitle("Adding as New User...");
+                progressDialog.show();
+
                 if (email.isEmpty()){
+                    progressDialog.dismiss();
                     mEmail.setError("Email Required");
                     mEmail.requestFocus();
                 }
                 else if (password.length()<=8 && !password.matches("[A-Z]*") && !password.matches("[a-z]*") && !password.matches("[0-9]*") && !(password.contains("AND") || password.contains("NOT"))){
+                    progressDialog.dismiss();
                     mPassword.setError("Password Required\nPassword is to sort\nThere must be at least A-Z\n" +
                             "There must be at least a-z\n" +
                             "There must be at least 0-9");
                     mPassword.requestFocus();
                 }
                 else if (confPassword.isEmpty()){
+                    progressDialog.dismiss();
                     mPassword.setError("Confirm password Required");
                     mPassword.requestFocus();
                 }
                 else if(TextUtils.isEmpty(email) && TextUtils.isEmpty(password) && TextUtils.isEmpty(confPassword)){
+                    progressDialog.dismiss();
                     Toast.makeText(SignUpActivity.this,"Fields are empty",Toast.LENGTH_SHORT).show();
                 }
                 else if(!(TextUtils.isEmpty(email) && TextUtils.isEmpty(password) && TextUtils.isEmpty(confPassword))){
@@ -69,6 +79,7 @@ public class SignUpActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (!task.isSuccessful()) {
+                                    progressDialog.dismiss();
                                     Toast.makeText(SignUpActivity.this, "SignUp is Unsuccessful, Please try again ", Toast.LENGTH_SHORT).show();
                                     Log.d(TAG, "Email - "+"Activity - "+ this.toString() + " SignUp is Unsuccessful, Please try again");
 
@@ -81,6 +92,7 @@ public class SignUpActivity extends AppCompatActivity {
                                                     @Override
                                                     public void onComplete(@NonNull Task<Void> task) {
                                                         if (task.isSuccessful()){
+                                                            progressDialog.dismiss();
                                                             Log.d(TAG, "Email - "+FirebaseAuth.getInstance().getCurrentUser().getEmail() + "Activity - "+ this.toString() + " SignUp is Successful" + "the email is sent");
                                                             Toast.makeText(SignUpActivity.this, "Email Sent Successfully! Check Your Mail", Toast.LENGTH_SHORT).show();
                                                             startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
@@ -93,10 +105,12 @@ public class SignUpActivity extends AppCompatActivity {
                         });
                     }
                     else{
+                        progressDialog.dismiss();
                         Toast.makeText(SignUpActivity.this,"Password's Not Match",Toast.LENGTH_SHORT).show();
                     }
                 }
                 else {
+                    progressDialog.dismiss();
                     Toast.makeText(SignUpActivity.this,"Error! Please Try Again",Toast.LENGTH_SHORT).show();
                 }
             }
