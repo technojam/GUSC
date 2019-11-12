@@ -8,31 +8,130 @@
     android:orientation="vertical"
     tools:context=".CreateEventActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/lightred">
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:text="CREATE EVENT"
+         android:textSize="18dp"
+         android:fontFamily="@font/helveticaneue_bold"
+         android:textColor="@color/text_white"
+         android:gravity="center"/>
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rectangle"
+        android:layout_marginStart="08dp"
+        android:layout_marginEnd="08dp"
+        android:layout_marginTop="08dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+    <RelativeLayout
+        android:id="@+id/image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="15dp"
+        android:elevation="06dp"
+        android:background="@drawable/edit_box_rec">
+
+
+        <ImageView
+            android:id="@+id/coverpic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="05dp"
+            android:layout_marginStart="05dp"
+            android:layout_marginEnd="05dp"
+            android:layout_marginBottom="05dp"
+            android:src="@drawable/ic_launcher_select_image_foreground" />
+        <TextView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:text="Add Image"
+            android:textColor="@color/text_black"
+             android:fontFamily="@font/helveticaneue_regular"
+             android:gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="160dp"
+             android:textSize="20sp"/>
+    </RelativeLayout>
+
     <EditText
         android:id="@+id/eventname"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Event Name"/>
-    <EditText
-        android:id="@+id/eventdata"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Event Date"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Select cover Pic"/>
-    <ImageView
-        android:id="@+id/coverpic"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/technojam_logo"/>
-    <Button
-        android:id="@+id/createbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Create Event"
-        />
+        android:layout_height="45dp"
+        android:background="@drawable/edit_box_rec"
+        android:paddingLeft="10dp"
+        android:hint="Event Name"
+        android:layout_marginTop="15dp"/>
 
+    <EditText
+        android:id="@+id/eventVenue"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/edit_box_rec"
+        android:hint="Event Venue"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="15dp"/>
+
+
+        <EditText
+            android:id="@+id/eventdata"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_box_rec"
+            android:hint="DD/MM/YYYY"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:focusable="false"
+            android:clickable="true"/>
+
+
+        <EditText
+        android:id="@+id/eventtime"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/edit_box_rec"
+        android:hint="MM:HH"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:focusable="false"
+        android:clickable="true"/>
+
+        <EditText
+            android:id="@+id/eventDisc"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="Description"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit_box_rec"
+            android:gravity="top"
+            android:paddingLeft="10dp"/>
+
+            <Button
+            android:id="@+id/createbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Event"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"/>
+
+
+
+</LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
