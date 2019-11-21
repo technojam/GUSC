@@ -18,7 +18,7 @@ public class ClubActivity extends AppCompatActivity {
     private String clubName;
     private FirebaseAuth mAuth;
     FloatingActionMenu mFab;
-    FloatingActionButton mFab1;
+    FloatingActionButton mFab1,mFab2;
     private boolean isFabOpen;
 
     @Override
@@ -33,6 +33,7 @@ public class ClubActivity extends AppCompatActivity {
         Button mPhotoBtn = findViewById(R.id.PhotosButton);
         Button mRegisterBtn = findViewById(R.id.RegistrationButton);
         mFab1 = findViewById(R.id.fab1);
+        mFab2 = findViewById(R.id.fab2);
         mFab = findViewById(R.id.menu);
 
         int clubLogo = getIntent().getExtras().getInt("clubLogo");
@@ -71,6 +72,16 @@ public class ClubActivity extends AppCompatActivity {
                 }
             });
 
+            mFab2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(ClubActivity.this, RegisteredStudentActivity.class);
+                    intent.putExtra("clubname", clubName);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+
             mclubLogo.setImageResource(clubLogo);
             mClubName.setText(clubName);
             mAboutClub.setText(aboutClub);
@@ -100,7 +111,7 @@ public class ClubActivity extends AppCompatActivity {
             mPhotoBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(ClubActivity.this, "", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ClubActivity.this, "Image is not there", Toast.LENGTH_SHORT).show();
                 }
             });
 

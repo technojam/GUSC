@@ -15,8 +15,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -25,9 +27,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -69,6 +75,7 @@ public class RegistrationActivity extends AppCompatActivity {
         mFee = findViewById(R.id.Fee);
         mTotlaFee = 0;
 
+        List<String> list = new ArrayList<>();
         mClubsList = getResources().getStringArray(R.array.Clubs);
         checkedClubs = new boolean[mClubsList.length];
 
@@ -159,8 +166,9 @@ public class RegistrationActivity extends AppCompatActivity {
                 String whatsapp_No = mWhatsappNo.getText().toString().trim();
                 String emailId = mEmailId.getText().toString().trim();
 
+                Uid = mAuth.getUid();
 
-                if(database.collection("Clubs").document(mClubName).collection("Registered Student").document(Uid).equals(Uid)) {
+                if(database.collection("Clubs").document(mClubName).collection("Registered Student").document(Uid).getId().equals(Uid)) {
                     Log.d("Log_test","Id = "+ database.collection("Clubs").document(mClubName).collection("Registered Student").document(Uid).getId()+ " Uid = " + Uid);
                     Toast.makeText(RegistrationActivity.this, "Already Registered", Toast.LENGTH_SHORT).show();
                 }
@@ -172,8 +180,8 @@ public class RegistrationActivity extends AppCompatActivity {
 
                     Uid = mAuth.getUid();
 
-                    Log.d("Log_test","Id = "+ database.collection("Clubs").document(mClubName).collection("Registered Student").document(Uid).getParent()+ " Uid = " + Uid);
-                    DocumentReference dbReference = collectionReference("Clubs", mClubName, "Registered Student").document(name);
+                    Log.d("Log_test","Id = "+ database.collection("Clubs").document(mClubName).collection("Registered Student").document(Uid).getId()+ " Uid = " + Uid);
+                    DocumentReference dbReference = collectionReference("Clubs", mClubName, "Registered Student").document(Uid);
 
                     RegisterStudent mRegisterStudent = new RegisterStudent(
                             name,

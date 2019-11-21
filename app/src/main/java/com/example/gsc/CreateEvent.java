@@ -3,15 +3,28 @@ package com.example.gsc;
 
 public class CreateEvent {
 
-     private String EventName, EventDate,EventDisc,EventTime,EventVenue;
+     private String ImageUrl, EventName, EventDate,EventDisc,EventTime,EventVenue;
 
-    public CreateEvent(String eventName, String eventDate, String eventDisc, String eventTime,String eventVenue) {
-        EventName = eventName;
-        EventDate = eventDate;
-        EventDisc= eventDisc;
-        EventTime= eventTime;
-        EventVenue=eventVenue;
+     public CreateEvent(){
 
+     }
+
+    public CreateEvent(String eventName, String eventDate, String eventDisc, String eventTime,String eventVenue,String imageUrl) {
+         EventName = eventName;
+         EventDate = eventDate;
+         EventDisc= eventDisc;
+         EventTime= eventTime;
+         EventVenue=eventVenue;
+         ImageUrl = imageUrl;
+    }
+
+    public CreateEvent(String eventName, String imageUrl){
+         EventName = eventName;
+         ImageUrl = imageUrl;
+    }
+
+    public String getImageUrl(){
+         return ImageUrl;
     }
 
     public String getEventName() {

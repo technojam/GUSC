@@ -28,6 +28,7 @@ public class ClubEventTabFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_club_event_tab_, container, false);
 
         ArrayList<EventList> meventList = new ArrayList<>();
