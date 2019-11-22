@@ -2,7 +2,10 @@
 <resources>
     <color name="colorPrimary">#FFC107</color>
     <color name="colorPrimaryDark">#FFA000</color>
-    <color name="colorAccent">#a9241b</color>
+    <color name="dark_red">#771613</color>
+    <color name="war_red">#E66358</color>
+    <color name="dark_green">#168615</color>
+    <color name="green">#72D168</color>
     <color name="backgrounddark">#3246ef</color>
     <color name="backgroundlight"> #f9d0a2 </color>
     <color name="transparent">#00000000</color>
