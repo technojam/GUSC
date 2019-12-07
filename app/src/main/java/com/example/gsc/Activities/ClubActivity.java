@@ -60,6 +60,8 @@ public class ClubActivity extends AppCompatActivity {
 
         // to show a view after auth
         if (mAuth.getCurrentUser() != null) {
+
+            // replace with your Uid to get admin access.
             if (mAuth.getCurrentUser().getUid().equals("k2lF12xwmyZrN2Etm7rKfO10RdL2" ) || mAuth.getCurrentUser().getUid().equals("2NUaYkzscvXNSoA8OZj9Y9niwbp2")) {
                 mFab.setVisibility(View.VISIBLE);
                 mRegisterBtn.setText("Add Student");
