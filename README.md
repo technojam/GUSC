@@ -10,6 +10,8 @@ If you find any bug or you have any idea to improve it just create the
 
 If you are sure that you can solve any of the [Issues](https://github.com/technojam/GUSC/issues) feel free to ask in the comment section. and follow the steps.
 
+## NOTE!! "Use your own firebase JSON file required to run app "
+
 * Fork this repo to your github.
 * Create new branch for every Issues.
 * Solve the issue.
