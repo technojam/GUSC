@@ -1,7 +1,7 @@
 # GUSC
 
-Welcome you all in this project, this app is for club event management. 
-this project is on <b> Java </b> and <b>XML</b>.
+Welcome you all in this project, this app is for clubs event management. 
+this project is in <b> Java </b> and <b>XML</b>.
 
 If you find any bug or you have any idea to improve it just create the 
 [Issues](https://github.com/technojam/GUSC/issues/new).
